@@ -12,10 +12,18 @@
     padding-top: 3.125rem;
     padding-left: 20px;
     line-height: $footer-line-height;
+
+    .footer-image{
+      width: 156px;
+      height: 40px;
+      max-width: 400px !important;
+    }
     .footer-text{
       color: $footer-text-color;
       font-size: $footer-text-size;
       font-weight: $footer-text-weight !important;
+
+
       &.footer-title{
         font-weight: bold;
         color: white;
@@ -25,7 +33,14 @@
     .footer-input{
 
     }
-
+    .footer-links{
+      text-decoration: none;
+      color: $footer-text-color !important;
+      &:hover{
+        color: white !important;
+        cursor: pointer;
+      }
+    }
     .footer-bellow{
       display: flex;
       position: absolute;
