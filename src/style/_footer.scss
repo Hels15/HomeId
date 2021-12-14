@@ -1,7 +1,39 @@
 .footer-container{
-  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  background-color: $footer-bg;
   position: sticky;
   top: 100vh;
   width: auto;
   height: $footer-height;
+
+
+  .footer-items{
+    padding-top: 3.125rem;
+    padding-left: 20px;
+    line-height: $footer-line-height;
+    .footer-text{
+      color: $footer-text-color;
+      font-size: $footer-text-size;
+      font-weight: $footer-text-weight !important;
+      &.footer-title{
+        font-weight: bold;
+        color: white;
+        font-size: 16px;
+      }
+    }
+    .footer-input{
+
+    }
+
+    .footer-bellow{
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 20px;
+      .footer-bellow-content{
+        margin-right: 1.875rem;
+      }
+    }
+  }
 }

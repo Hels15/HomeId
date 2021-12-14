@@ -1,5 +1,6 @@
 @import "variables";
 @import "footer";
+@import "content-base";
 html{
   height: 100%;
 }
@@ -11,6 +12,7 @@ html{
 }
 
 body{
+  font-family: 'Libre Baskerville', serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,3 +23,4 @@ body{
     min-height: 100vh;
   }
 }
+
