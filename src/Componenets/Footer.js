@@ -2,8 +2,11 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import logo from "../Images/logo-white-primary.png"
 function Footer(props) {
+
+
+
     return (
-        <div className="footer-container">
+        <div className="footer-container" >
                     <div className="footer-items content-base">
                     <img className="footer-image footer-links" src={logo} alt="logo"/>
                     <div className="footer-text">58 Howard Street #2 San Francisco</div>
@@ -37,13 +40,32 @@ function Footer(props) {
                 </div>
                 <div className="footer-items content-base">
                     <div className="footer-text footer-title"> Sign Up for Our Newsletter</div>
-                    <div className="footer-text ">Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis</div>
-                    <div className="footer-input"><input type="text"/></div>
+                    <div  className="footer-text ">Lorem ipsum dolor sit amet, consecte tur cing elit.<br/>
+                        Suspe ndisse suscipit sagittis</div>
+                    <div className="footer-input">
+                        <input className="footer-input-style" placeholder="Your email" type="text"/>
+                        <button className="footer-button-style">Subscribe</button>
+                        <div className="footer-bellow-content footer-icons">
+                             <div className="footer-icon"><i className="fab fa-twitter"></i></div>
+                             <div className="footer-icon"><i className="fab fa-facebook-f"></i></div>
+                            <div className="footer-icon"><i className="fab fa-skype"></i></div>
+                            <div className="footer-icon"><i className="fab fa-linkedin-in"></i></div>
+                        </div>
+
+                    </div>
+                    <div className="footer-bellow footer-text">
+                        <div className="footer-bellow-content footer-copyright">
+                            &copy; 2020 homeID. All Rights Reserved
+                        </div>
+
+                    </div>
+
 
                 </div>
 
 
 
+}
         </div>
     );
 }
