@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import Footer from "./Componenets/Footer";
 import Header from "./Componenets/Header";
+import HeaderBottom from "./Componenets/HeaderBottom";
 import React from "react";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
 
               <BrowserRouter>
                 <Header/>
+                 <HeaderBottom/>
                 <Footer/>
               </BrowserRouter>
 
