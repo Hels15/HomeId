@@ -4,7 +4,6 @@ import logo from "../Images/logo-white-primary.png"
 function Footer(props) {
 
 
-
     return (
         <div className="footer-container" >
                     <div className="footer-items content-base">
