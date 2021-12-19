@@ -15,7 +15,7 @@ function Header(props) {
     return (
        <div className="header-container">
            <div className="content-base">
-              {menu_list.map(item_data => item_data.title)}
+              {menu_list.map(item_data => item_data.items)}
            </div>
 
        </div>
