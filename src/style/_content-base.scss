@@ -1,4 +1,9 @@
 .content-base{
   max-width: $max-width;
   margin: 0 auto;
+  .user-select{
+    but{
+      pointer-events: none;
+    }
+  }
 }

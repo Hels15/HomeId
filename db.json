@@ -1,10 +1,13 @@
 {
   "categories": [
     {"id":  0, "title": "Home", "items" :  ["Home01","Home02","Home03","Home04", "Home05", "Home06", "Home07", "Home08"]},
-    {"id":  1, "title": "Property", "items" :  [{"Listview" : ["Full width list", "List with left filter", "List with right filter", "List with left sidebar", "List with right sidebar"]}, {"GridView":  ["Full width grid 1","Full width grid 2", "Full width grid 3", "Grid with left filter", "Grid with right filter", "Grid with left sidebar", "Grid with right sidebar"]}, {"Map style":  ["Half map list layout 1", "Half map list layout 2", "Half map grid layout 1", "Half map grid layout 2", "Full map 1", "Full map 2", "Full Map with sidebar"]}, {"Single Property":  ["Single Property 1", "Single Property 2", "Single Property 3", "Single Property 4","Single Property 5", "Single Property 6", "Single Property 7","Single Property 8", "Single Property 9"]}]},
+    {"id":  1, "title": "Property", "items" :  ["Listview","GridView","Map style","Single Property"]},
     {"id": 2,"title": "Dashboard","items": ["Dashboard", "Add New Property", "My Properties", "My favorites", "Save Search", "Reviews", "My Package", "My Profile", "Signup and login", "Password Recovery"] },
-    {"id":  3, "title": "Pages", "items":  [{"News":  ["Blog classic", "Blog grid", "Blog grid with sidebar", "Blog list with sidebar", "Blog details 1 ", "Blog details 2"]}, {"About us":  []}, {"Service": ["Services", "Services with sidebar"]}, {"Contact us":  ["Contact us 1", "Contact us 2"]}, {"Agent": ["Agent grid 1", "Agent grid 2", "Agents grid with sidebar", "Agent list", "Agent details 1", "Agent details 2"]},{ "Agency": ["Agency grid", "Agency list", "Agency details 1", "Agency details 2"]}, {"FAQS": []}, {"Page 404":  []}, {"Checkout": []}, {"Payment Completed": []}, {"Compare": []}, {"Packages":  []}]},
-    {"id": 4, "title": "Docs", "items": ["Documentation", "UI Kit", "Changelog", "Support"]}
+    {"id":  3, "title": "Pages", "items":  ["News","About us","Service","Contact us","Agent", "Agency","FAQS","Page 404","Checkout","Payment Completed","Compare", "Packages"]},
+    {"id": 4, "title": "Docs", "items": ["Documentation", "UI Kit", "Changelog", "Support"]},
+    {"id": 5, "title": "ENG", "items": null},
+    {"id": 6, "title": "SIGN IN", "items":null}
+
   ]
 
 
