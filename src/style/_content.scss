@@ -1,0 +1,70 @@
+.home-container{
+  display: grid;
+  grid-template-columns: auto auto;
+  height: auto;
+  background-color: $home-page-color;
+  border: 1px solid red;
+
+  input{
+    position: relative;
+    background-color: $home-page-background-color;
+    border: 0;
+    padding-left: 10px;
+    width: 284px !important;
+    height: 52px  !important;
+    &:focus{
+        outline-style: none;
+        box-shadow: none;
+        border-color: transparent;
+      }
+     &::placeholder{
+        font-size: 15px;
+        color: $footer-text-color;
+      }
+  }
+  .find-your-home{
+    padding-left: 1.875rem;
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid orange;
+    background-color: white;
+    width: 344px;
+    height: auto;
+    border-radius: 5px;
+    .find-your-home-text{
+      font-size: $home-page-font-size;
+      font-weight:$home-page-font-weight !important;
+      color: $home-page-font-color !important;
+      padding-top: 20px;
+    }
+    .item{
+      position: relative;
+
+      .icon{
+        position: absolute;
+        top: 25%;
+        transform: translateY(-0%);
+
+        right: 0;
+        padding-right: 40px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+    .text{
+      padding-bottom: 20px;
+
+    }
+    .beds-and-baths-text{
+      display: flex;
+      gap:15px;
+
+      }
+      input{
+         height: 52px !important;
+        width: 137px !important;
+      }
+    }
+  }
