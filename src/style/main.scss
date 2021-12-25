@@ -3,7 +3,7 @@
 @import "content-base";
 @import "header";
 @import "headerbottom";
-
+@import "content";
 html{
   height: 100%;
 }
@@ -15,13 +15,13 @@ html{
 }
 
 body{
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Poppins", serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  background-color: #fff;
+  background-color: #ffffff;
   .App{
     min-height: 100vh;
   }

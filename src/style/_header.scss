@@ -8,17 +8,20 @@
     width: 156px;
     height: 40px;
     margin-top: -10px;
+
   }
   .menu{
+    margin-left: 60px;
     display: flex;
     .grid-gap{
       margin-left: 30px;
     }
     .menu-item{
       position: relative;
-      margin-right: 10px;
+      margin-right: 25px;
+
       cursor: pointer;
-      color: $header-menu-color;
+      color: $header-menu-color !important;
       text-decoration: none;
       font-size: 14px;
       font-weight: $header-menu-text-weight !important;
@@ -39,9 +42,6 @@
         bottom: -10px;
         transition: 0.3s;
       }
-      &:hover:after{
-      width: 100%;
-    }
 
       }
       i{
@@ -75,5 +75,9 @@
         }
       }
 
+    }
+
+    .menu > .menu-item:hover:after{
+      width: 100%;
     }
   }
