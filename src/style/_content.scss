@@ -52,6 +52,7 @@
           cursor: pointer;
         }
       }
+
     }
     .text{
       padding-bottom: 20px;
@@ -60,11 +61,22 @@
     .beds-and-baths-text{
       display: flex;
       gap:15px;
+      #beds {
+        box-sizing: border-box;
+        .icon{
+          right:-20px;
+        }
+      }
+      #baths {
+        min-width: 137px;
 
       }
-      input{
+
+       input{
          height: 52px !important;
         width: 137px !important;
       }
+      }
+
     }
   }

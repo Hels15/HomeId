@@ -35,7 +35,7 @@ function MenuItem({item_data}){
         {
             item_data.items && <div id="popup" className="popup-menu">
                 {
-                    item_data.items.map(i => <Link to={`/categories/${item_data.title}/${i}`} key={i} id="data-dropdown-button" className="menu-item popup-item">{i}</Link>)
+                    item_data.items.map(i => <Link to={`/categories/${item_data.title}/${i}`} key={i}  className="menu-item popup-item">{i}</Link>)
                 }
             </div>
         }

@@ -27,8 +27,8 @@ function Content(props) {
 
                 <div className="item">
                      <div className="beds-and-baths-text">
-                         <div className="text"><input placeholder="Beds" type="text"/><i className="fas fa-angle-down icon"></i></div>
-                          <div className="text"><input placeholder="Baths" type="text"/><i className="fas fa-angle-down icon"></i></div>
+                         <div className="item text" id="beds"><input placeholder="Beds" type="text"/><i className="fas fa-angle-down icon"></i></div>
+                          <div className="text" id="baths"><input placeholder="Baths" type="text"/><i className="fas fa-angle-down icon"></i></div>
                      </div>
                 </div>
 
