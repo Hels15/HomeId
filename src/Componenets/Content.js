@@ -88,6 +88,9 @@ function Content(props) {
                     </Box>
 
                 </div>
+                <div className="other-features">
+                    <OtherFeatures/>
+                </div>
 
             </div>
             <div className="properties">

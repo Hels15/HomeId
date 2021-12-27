@@ -13,7 +13,7 @@ const MenuProps = {
   PaperProps: {
     style: {
       maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
+      width: 300,
     },
   },
 };
@@ -40,7 +40,7 @@ const names = [
 
 
 function OtherFeatures(props) {
-    const [personName, setPersonName] = useState();
+    const [personName, setPersonName] = useState([]);
 
     const handleChange = (event) =>{
         const {
@@ -58,7 +58,7 @@ function OtherFeatures(props) {
         <div>
          <FormControl sx={{ m: 1, width: 300 }}>
         <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
-        <Select
+        <Select style={{minWidth: 300}}
           labelId="demo-multiple-checkbox-label"
           id="demo-multiple-checkbox"
           multiple
