@@ -55,11 +55,12 @@ function Menu(){
 
 }
 
-function Header(props) {
+function Header(item_data) {
     return (
        <div className="content-base header-container">
                <div className="img"><img src={logo} alt=""/></div>
                <div className=""><Menu/></div>
+              {item_da}
 
 
        </div>

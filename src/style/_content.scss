@@ -54,6 +54,17 @@
       }
 
     }
+    .slider{
+      .slider-price-style{
+        color: $home-page-price-style-color;
+        text-align: center;
+        font-weight: $home-page-font-weight + 100 !important;
+        margin-bottom: 10px;
+      }
+      .slider-title{
+        color: $home-page-slider-text-color;
+      }
+    }
     .text{
       padding-bottom: 20px;
 
