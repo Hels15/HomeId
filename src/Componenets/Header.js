@@ -20,7 +20,8 @@ function MenuItem({item_data}){
 
 
 
-    return <Link  className="menu-item"  to={`categories/${item_data.title}`}>
+
+    return <Link   className="menu-item"  to={`categories/${item_data.title}`}>
         {item_data.title}
         {
             item_data.items && <i className="fas fa-angle-down"></i>
@@ -36,6 +37,20 @@ function MenuItem({item_data}){
 }
 
 function Menu(){
+      const handleButton = (event) =>{
+          console.log("click")
+        if (!event.target.matches('.menu-item')) {
+            var dropdowns = document.getElementsByClassName(".popup-menu")
+            var i;
+            for(i=0; i< dropdowns.length; i++){
+                var openDropdown = dropdowns[i]
+                if(openDropdown.classList.contains("popup-menu")){
+                    openDropdown.classList.remove("popup-menu")
+                }
+            }
+        }
+        }
+
     const [menu_list, set_menu_list] = useState([])
 
      useEffect(() =>{
@@ -48,7 +63,7 @@ function Menu(){
     return(
         <div className="menu" >
             {
-                menu_list.map(item_data => <MenuItem key={item_data.id} item_data={item_data}/>)
+                menu_list.map(item_data => <MenuItem onClick={handleButton} key={item_data.id} item_data={item_data}/>)
             }
         </div>
     )
@@ -56,6 +71,9 @@ function Menu(){
 }
 
 function Header(item_data) {
+
+
+
     return (
        <div className="content-base header-container">
                <div className="img"><img src={logo} alt=""/></div>
