@@ -1,22 +1,11 @@
 import React, {useState} from 'react';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import ListItemText from '@mui/material/ListItemText';
-import Select from '@mui/material/Select';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import ListItemText from '@mui/material/ListItemText'
 import Checkbox from '@mui/material/Checkbox';
+import AddIcon from '@mui/icons-material/Add';
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 300,
-    },
-  },
-};
 
 const names = [
   'Air Conditioning',
@@ -40,44 +29,43 @@ const names = [
 
 
 function OtherFeatures(props) {
-    const [personName, setPersonName] = useState([]);
+    const [anchorEl, setAnchorEl] = useState()
+    const open = Boolean(anchorEl)
 
-    const handleChange = (event) =>{
-        const {
-            target: {value}
-        } = event;
-
-        setPersonName(
-            typeof  value === "string" ? value.split(",") : value,
-        )
+    const handleClick = (event) =>{
+      setAnchorEl(event.currentTarget)
+    };
+    const handleClose =  () => {
+        setAnchorEl(null)
     }
-
-
-
-    return (
+     return (
         <div>
-         <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
-        <Select style={{minWidth: 300}}
-          labelId="demo-multiple-checkbox-label"
-          id="demo-multiple-checkbox"
-          multiple
-          value={personName}
-          onChange={handleChange}
-          input={<OutlinedInput label="Tag" />}
-          renderValue={(selected) => selected.join(', ')}
-          MenuProps={MenuProps}
-        >
-          {names.map((name) => (
-            <MenuItem key={name} value={name}>
-              <Checkbox checked={personName.indexOf(name) > -1} />
+            <Button
+            id="basic-button"
+            aria-controls="basic-menu"
+            aria-haspopup="true"
+            aria-expanded={open ? 'true' : undefined}
+            onClick={handleClick}
+            startIcon={<AddIcon/>}
+
+            >
+                Other Features
+            </Button>
+
+            {names.map((name) => (
+            <MenuItem style={{marginBottom: 0, margin: 0}} key={name} value={name}>
+              <Checkbox />
               <ListItemText primary={name} />
             </MenuItem>
           ))}
-        </Select>
-      </FormControl>
+
         </div>
     );
+
+
 }
+
+
+
 
 export default OtherFeatures;
