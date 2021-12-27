@@ -3,7 +3,25 @@ import {Link} from "react-router-dom";
 import axios from "axios"
 import logo from "../Images/logo_black_primary.png"
 
-function MenuItem({item_data}){
+function MenuItem({item_data, onClick}){
+     const handleButton = (event) =>{
+          console.log("click")
+        if (!event.target.matches('.menu-item')) {
+            var dropdowns = document.getElementsByClassName(".popup-menu")
+            var i;
+            for(i=0; i< dropdowns.length; i++){
+                var openDropdown = dropdowns[i]
+                if(openDropdown.classList.contains("popup-menu")){
+                    openDropdown.classList.remove("popup-menu")
+                }
+            }
+        }
+        }
+
+    if(onClick){
+        handleButton()
+    }
+
     const [grid_gap, set_grid_gap] = useState(false)
     const [menu_list, set_menu_list] = useState([])
 
@@ -37,19 +55,7 @@ function MenuItem({item_data}){
 }
 
 function Menu(){
-      const handleButton = (event) =>{
-          console.log("click")
-        if (!event.target.matches('.menu-item')) {
-            var dropdowns = document.getElementsByClassName(".popup-menu")
-            var i;
-            for(i=0; i< dropdowns.length; i++){
-                var openDropdown = dropdowns[i]
-                if(openDropdown.classList.contains("popup-menu")){
-                    openDropdown.classList.remove("popup-menu")
-                }
-            }
-        }
-        }
+
 
     const [menu_list, set_menu_list] = useState([])
 
@@ -63,7 +69,7 @@ function Menu(){
     return(
         <div className="menu" >
             {
-                menu_list.map(item_data => <MenuItem onClick={handleButton} key={item_data.id} item_data={item_data}/>)
+                menu_list.map(item_data => <MenuItem  onClick={true} key={item_data.id} item_data={item_data}/>)
             }
         </div>
     )

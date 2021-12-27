@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import {purple} from "@mui/material/colors";
+import OtherFeatures from "./OtherFeatures";
 
 
 function numberWithCommas(x) {
@@ -85,6 +86,7 @@ function Content(props) {
                         </Slider>
                         <p className="slider-price-style">${numberWithCommas(anotherValue[0])} sqft to ${numberWithCommas(anotherValue[1])} sqft</p>
                     </Box>
+
                 </div>
 
             </div>
