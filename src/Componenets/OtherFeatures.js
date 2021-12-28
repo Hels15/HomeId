@@ -29,22 +29,31 @@ const names = [
 
 
 function OtherFeatures(props) {
-    const [anchorEl, setAnchorEl] = useState()
-    const open = Boolean(anchorEl)
+    const [opacity, set_opacity] = useState(0)
+    const [display, set_display] = useState("none")
+    const [visibility, set_visibility] = useState("hidden")
+    const [checked, setChecked] = useState(false)
 
-    const handleClick = (event) =>{
-      setAnchorEl(event.currentTarget)
-    };
-    const handleClose =  () => {
-        setAnchorEl(null)
+    const handleClick = (event) => {
+        if(display === "none"){
+            set_display(true)
+        }
+        else{
+            set_display("none")
+        }
+        }
+
+    const toggleCheckbox = (event) => {
+        setChecked(event.target.checked)
     }
-     return (
+
+        return (
         <div>
             <Button
             id="basic-button"
             aria-controls="basic-menu"
             aria-haspopup="true"
-            aria-expanded={open ? 'true' : undefined}
+
             onClick={handleClick}
             startIcon={<AddIcon/>}
 
@@ -53,17 +62,22 @@ function OtherFeatures(props) {
             </Button>
 
             {names.map((name) => (
-            <MenuItem style={{marginBottom: 0, margin: 0}} key={name} value={name}>
-              <Checkbox />
+            <MenuItem style={{display: display}} className="my-custom-checkbox" key={name} value={name}>
+              <Checkbox checked={checked} onChange={toggleCheckbox} />
               <ListItemText primary={name} />
             </MenuItem>
+
           ))}
+            <h2>Hi</h2>
 
-        </div>
-    );
+        </div>)
+
+    }
 
 
-}
+
+
+
 
 
 

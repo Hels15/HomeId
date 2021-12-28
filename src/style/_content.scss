@@ -5,13 +5,15 @@
   background-color: $home-page-color;
   border: 1px solid red;
   width: auto;
+
+
   input{
     position: relative;
     background-color: $home-page-background-color;
     border: 0;
     padding-left: 10px;
-    width: 284px !important;
-    height: 52px  !important;
+
+    height: 52px ;
     &:focus{
         outline-style: none;
         box-shadow: none;
@@ -32,6 +34,11 @@
     width: 344px;
     height: auto;
     border-radius: 5px;
+
+    .my-custom-checkbox input{
+    width: unset !important;
+    height: unset !important;
+  }
     .find-your-home-text{
       font-size: $home-page-font-size;
       font-weight:$home-page-font-weight !important;
