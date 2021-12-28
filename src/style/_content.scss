@@ -38,7 +38,13 @@
     .my-custom-checkbox input{
     width: unset !important;
     height: unset !important;
+
   }
+    .my-custom-checkbox{
+      .checkbox{
+
+      }
+    }
     .find-your-home-text{
       font-size: $home-page-font-size;
       font-weight:$home-page-font-weight !important;

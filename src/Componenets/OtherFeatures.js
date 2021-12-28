@@ -63,7 +63,7 @@ function OtherFeatures(props) {
 
             {names.map((name) => (
             <MenuItem style={{display: display}} className="my-custom-checkbox" key={name} value={name}>
-              <Checkbox checked={checked} onChange={toggleCheckbox} />
+              <Checkbox className="checkbox" checked={checked} onChange={toggleCheckbox} />
               <ListItemText primary={name} />
             </MenuItem>
 
