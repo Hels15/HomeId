@@ -1,0 +1,17 @@
+.form-control{
+
+  .form-control-item{
+    background-color: red;
+
+    .select{
+      x:unset;
+      i{
+        font-size: clamp(0px,0vw,0px);
+      }
+
+      p{
+        width: 100%;
+      }
+    }
+  }
+}

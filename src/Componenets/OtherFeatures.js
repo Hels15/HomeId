@@ -43,9 +43,6 @@ function OtherFeatures(props) {
         }
         }
 
-    const toggleCheckbox = (event) => {
-        setChecked(event.target.checked)
-    }
 
         return (
         <div>
@@ -63,8 +60,19 @@ function OtherFeatures(props) {
 
             {names.map((name) => (
             <MenuItem style={{display: display}} className="my-custom-checkbox" key={name} value={name}>
-              <Checkbox className="checkbox" checked={checked} onChange={toggleCheckbox} />
-              <ListItemText primary={name} />
+              <Checkbox sx={{
+                  position: 'relative',
+                 '& .PrivateSwitchBase-input':{
+                      position: 'absolute'
+                 },
+                  '& .MuiSvgIcon-root': {
+                      position: 'absolute'
+                  },
+                  paddingRight: "30px",
+                  transform: "scale(1.3)"
+              }} className="checkbox"/>
+              <ListItemText sx={{fontSize: "30px", '& .MuiTypography-root' :{
+               fontSize: "20px"}}} primary={name} />
             </MenuItem>
 
           ))}
