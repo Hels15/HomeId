@@ -34,11 +34,13 @@ Item.propTypes = {
 
 function FindInput(props) {
      //select
-    const [city, setCity] = useState("city")
-    const [type, setType] = useState("")
-    const [status, setStatus] = useState("")
-    const [beds, setBeds] = useState("")
-    const [baths, setBaths] = useState("")
+   const [info, setInfo] = useState({
+       city: "",
+       beds: "",
+       type: "",
+       status: "",
+       baths: ""
+   })
 
 
     const handleString = (object) =>{
@@ -47,23 +49,11 @@ function FindInput(props) {
         }
         return false
     }
-    const handleCity = (event,newValue) =>{
-        setCity(event.target.value)
-    }
-    const handleType = (event ,newValue) => {
-        setType(event.target.value)
-    }
-    const handleStatus = (event ,newValue) => {
-        setStatus(event.target.value)
-    }
-    const handleBeds = (event ,newValue) => {
-
-            setBeds(event.target.value)
-    }
-    const handleBaths = (event ,newValue) => {
-        setBaths(event.target.value)
-    }
-
+    const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name)
+    setInfo({ ...info, [name]: value });
+  };
 
 
     const cities = ["Austin", "Boston", "Chicago", "Denver", "Los Angeles", "New York", "San Francisco"]
@@ -85,16 +75,20 @@ function FindInput(props) {
 
     return (
         <div className="form-control">
-             <FormControl className="form-control-item">
+             <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
 
-
+                    <InputLabel id="demo-simple-select-label">Location</InputLabel>
                     <Select className="select" sx={{width: "250px",paddingRight: "unset",
-                        }
+                        "& .MuiSelect-nativeInput":{
+                        width: 0
+                        }}
                     }
+                        name="city"
 
+                        label="Location"
                         id="demo-simple-select-city-id"
-                        value={city}
-                        onChange={handleCity}
+                        value={info.city}
+                        onChange={(e) => handleChange(e)}
 
                     >
 
@@ -102,64 +96,80 @@ function FindInput(props) {
 
                     </Select>
                 </FormControl>
-                <FormControl>
+                <FormControl sx={{paddingBottom: 5}}>
 
-
-                    <Select sx={{width: "250px"}}
-
+                    <InputLabel id="demo-simple-select-label-types">All Types</InputLabel>
+                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                        width: 0
+                        }}}
+                        name="type"
+                        label="All Types"
                         id="demo-simple-select-types-id"
-                        value={type}
-                        onChange={handleType}
+                        value={info.type}
+                        onChange={(e) => handleChange(e)}
 
                     >
                         {createMenus(types)}
 
                     </Select>
                 </FormControl>
-                 <FormControl>
+                 <FormControl sx={{paddingBottom: 5}}>
+                    <InputLabel id="demo-simple-select-label-status">All Status</InputLabel>
 
-
-                    <Select sx={{width: "250px"}}
-
+                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                        width: 0
+                        }}}
+                        name="status"
+                        label="All Status"
                         id="demo-simple-select-status-id"
-                        value={status}
-                        onChange={handleStatus}
+                        value={info.status}
+                        onChange={(e) => handleChange(e)}
 
                     >
                         {createMenus(statuses)}
 
                     </Select>
                  </FormControl>
-           <div className="flex-form-control">
-                 <FormControl >
+                <Box sx={{display: 'flex'}}>
+                     <FormControl sx={{paddingBottom: 5, width: 'auto'}}>
 
-
-                    <Select sx={{width: "250px"}}
-
+                    <InputLabel id="demo-simple-select-label-beds">Beds</InputLabel>
+                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                        width: 0
+                        }}}
+                        name="beds"
+                        label="Beds"
                         id="demo-simple-select-beds-id"
-                        value={beds}
-                        onChange={handleBeds}
+                        defaultValue="test"
+                        value={info.beds}
+                        onChange={(e) => handleChange(e)}
 
                     >
                         {createMenus(bedsArray)}
 
                     </Select>
                  </FormControl>
-            <FormControl >
+            <FormControl sx={{paddingBottom: 5, width: 'auto'}}>
 
-
-                    <Select sx={{width: "250px"}}
-
+                    <InputLabel id="demo-simple-select-label-beds">Baths</InputLabel>
+                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                        width: 0
+                        }
+                    }}
+                        name="baths"
                         id="demo-simple-select-baths-id"
-                        value={baths}
-                        onChange={handleBaths}
+                        label="Baths"
+                        value={info.baths}
+                        onChange={(e) => handleChange(e)}
 
                     >
                         {createMenus(bathsArray)}
 
                     </Select>
             </FormControl>
-            </div>
+
+                </Box>
+
 
 
         </div>
