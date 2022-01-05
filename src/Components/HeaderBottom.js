@@ -10,8 +10,9 @@ function handleClick(event) {
 
 function HeaderBottom(props) {
     return (
-        <div className="content-base" role="presentation" onClick={handleClick}>
-            <Breadcrumbs aria-label="breadcrumb">
+        <div className="header-bottom" role="presentation" onClick={handleClick}>
+            <div className="content-base">
+                <Breadcrumbs aria-label="breadcrumb">
                 <Link underline="hover" color="#ABABAB" href="/">
                     Home
                 </Link>
@@ -19,6 +20,10 @@ function HeaderBottom(props) {
             </Breadcrumbs>
             <br/>
             <div className="filter-text">Listing With Left Filter</div>
+            </div>
+
+
+
         </div>
     );
 }

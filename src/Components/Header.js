@@ -2,6 +2,7 @@ import React, {useEffect, useState}from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios"
 import logo from "../Images/logo_black_primary.png"
+import HeaderBottom from "./HeaderBottom";
 
 function MenuItem({item_data, onClick}){
     //  const handleButton = (event) =>{
@@ -70,16 +71,14 @@ function Menu(){
 
 function Header(item_data) {
 
-
-
     return (
-       <div className="content-base header-container">
+       <div className="header-container ">
+           <div className="content-base">
                <div className="img"><img src={logo} alt=""/></div>
                <div className=""><Menu/></div>
-
-
-
+           </div>
        </div>
+
     );
 }
 

@@ -78,7 +78,7 @@ function FindInput(props) {
              <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
 
                     <InputLabel id="demo-simple-select-label">Location</InputLabel>
-                    <Select className="select" sx={{width: "250px",paddingRight: "unset",
+                    <Select className="select" sx={{
                         "& .MuiSelect-nativeInput":{
                         width: 0
                         }}
@@ -96,10 +96,10 @@ function FindInput(props) {
 
                     </Select>
                 </FormControl>
-                <FormControl sx={{paddingBottom: 5}}>
+                <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
 
                     <InputLabel id="demo-simple-select-label-types">All Types</InputLabel>
-                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                    <Select sx={{"& .MuiSelect-nativeInput":{
                         width: 0
                         }}}
                         name="type"
@@ -113,10 +113,10 @@ function FindInput(props) {
 
                     </Select>
                 </FormControl>
-                 <FormControl sx={{paddingBottom: 5}}>
+                 <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
                     <InputLabel id="demo-simple-select-label-status">All Status</InputLabel>
 
-                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                    <Select sx={{"& .MuiSelect-nativeInput":{
                         width: 0
                         }}}
                         name="status"
@@ -130,11 +130,11 @@ function FindInput(props) {
 
                     </Select>
                  </FormControl>
-                <Box sx={{display: 'flex'}}>
-                     <FormControl sx={{paddingBottom: 5, width: 'auto'}}>
+                <Box className="box-container custom-parent" sx={{display:"flex", }}>
+                    <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
 
                     <InputLabel id="demo-simple-select-label-beds">Beds</InputLabel>
-                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                    <Select sx={{ "& .MuiSelect-nativeInput":{
                         width: 0
                         }}}
                         name="beds"
@@ -149,10 +149,10 @@ function FindInput(props) {
 
                     </Select>
                  </FormControl>
-            <FormControl sx={{paddingBottom: 5, width: 'auto'}}>
+            <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
 
                     <InputLabel id="demo-simple-select-label-beds">Baths</InputLabel>
-                    <Select sx={{width: "250px", "& .MuiSelect-nativeInput":{
+                    <Select sx={{ "& .MuiSelect-nativeInput":{
                         width: 0
                         }
                     }}
@@ -167,8 +167,13 @@ function FindInput(props) {
 
                     </Select>
             </FormControl>
-
                 </Box>
+
+
+
+
+
+
 
 
 
