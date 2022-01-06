@@ -6,8 +6,15 @@
   border: 3px solid green;
 
 
+  .img-content{
+    width: 100% !important;
+
+  }
+  .base-menu{
+    width: 100% !important;
+  }
   img{
-    width: 156px;
+    width: 156px;;
     height: 40px;
     margin-top: -10px;
 
@@ -15,6 +22,7 @@
   .menu{
     margin-left: 60px;
     display: flex;
+
 
     .padding{
       margin-left: 30px;
@@ -68,11 +76,14 @@
         transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
         pointer-events: none;
         .menu-item{
-          padding-top: 10px;
+
+
+          padding: 10px;
           margin-bottom: 10px;
           &.popup-item{
-            padding-left: 10px;
-            width: 100%;
+          text-align: center;
+
+          width: 100%;
             &:hover{
                  background-color: #f6f6f6;
             }

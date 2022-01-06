@@ -35,7 +35,9 @@ function MenuItem({item_data, onClick}){
         }
         {
             item_data.items && <div  className="popup-menu">
+
                 {
+
                     item_data.items.map(i => <Link to={`/categories/${item_data.title}/${i}`} key={i} className="menu-item popup-item">{i}</Link>)
                 }
             </div>
@@ -72,10 +74,14 @@ function Menu(){
 function Header(item_data) {
 
     return (
-       <div className="header-container ">
+       <div className="header-container">
            <div className="content-base">
-               <div className="img"><img src={logo} alt=""/></div>
-               <div className=""><Menu/></div>
+
+               <img src={logo} alt=""/>
+
+               <div ><Menu/></div>
+
+
            </div>
        </div>
 

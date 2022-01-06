@@ -1,7 +1,7 @@
 @import "variables";
 @import "footer";
-@import "content-base";
 @import "header";
+@import "content-base";
 @import "headerbottom";
 @import "content";
 @import "form-control";
@@ -21,7 +21,6 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   background-color: $home-page-color;
   .App{
     min-height: 100vh;

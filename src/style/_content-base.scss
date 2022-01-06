@@ -1,6 +1,7 @@
 .content-base{
-  max-width: $max-width;
-  margin: 0 auto;
+  max-width: $max-width !important;
+  margin: 0 auto !important;
+
   .user-select{
     .but{
       pointer-events: none;

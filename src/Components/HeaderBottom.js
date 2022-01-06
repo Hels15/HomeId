@@ -22,8 +22,6 @@ function HeaderBottom(props) {
             <div className="filter-text">Listing With Left Filter</div>
             </div>
 
-
-
         </div>
     );
 }
