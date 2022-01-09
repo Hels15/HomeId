@@ -24,6 +24,8 @@
         color: $footer-text-color;
       }
   }
+
+
   .find-your-home{
     padding-left: 1.875rem;
     display: flex;
@@ -105,4 +107,18 @@
       }
 
     }
+    .properties{
+      display: grid;
+      grid-template-columns: auto auto;
+      .found-section{
+
+       .found{
+
+       }
+        .sort-by{
+
+        }
+      }
+    }
+
   }

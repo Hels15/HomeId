@@ -1,28 +1,23 @@
 .header-container{
   display: grid;
   grid-template-columns: 200px auto;
-  margin-top: 20px ;
+
   background-color: white;
 
   position: relative;
-  width: 100% !important;
-  .img-content{
-    width: 100% !important;
+  width: 100% ;
 
-  }
-  .base-menu{
-    width: 100% !important;
-  }
+
   img{
     width: 156px;;
     height: 40px;
-    margin-top: -10px;
+    margin: 10px;
 
   }
   .menu{
     margin-left: 60px;
     display: flex;
-
+    width: 100%;
 
     .padding{
       margin-left: 30px;
@@ -32,6 +27,9 @@
       position: relative;
       margin-right: 25px;
 
+       i{
+        margin-left: 10px;
+      }
       cursor: pointer;
       color: $header-menu-color !important;
       text-decoration: none;
@@ -55,43 +53,47 @@
         left: 0;
         bottom: -10px;
         transition: 0.3s;
-      }
+        margin-bottom: 20px;
 
       }
-      i{
-        margin-left: 10px;
-      }
-      .popup-menu{
-
-        position: absolute;
-        left: 0;
-
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        color: #ababab;
-        z-index: 10;
-        border-radius: 10px;
-        filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.1));
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-        pointer-events: none;
-        .menu-item{
+       }
 
 
-          padding: 10px;
-          margin-bottom: 10px;
-          &.popup-item{
-          text-align: center;
+          .popup-menu {
+            position: absolute;
+            left: 0;
+            min-width: 100%;
+            padding-top: 1rem;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            color: #ababab;
+            z-index: 10;
+            border-radius: 10px;
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.1));
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+            pointer-events: none;
 
-          width: 100%;
-            &:hover{
-                 background-color: #f6f6f6;
+            .menu-item {
+
+
+              padding: 10px;
+              margin-bottom: 10px;
+
+              &.popup-item {
+                text-align: center;
+
+                width: 100%;
+
+                &:hover {
+                  background-color: #f6f6f6;
+                }
+              }
             }
           }
-        }
-      }
+
 
     }
 

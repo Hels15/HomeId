@@ -21,7 +21,7 @@ function valuetext(value) {
 function Content(props) {
     const [value,setValue] = useState([1000000,5000000])
     const [anotherValue,anotherSetValue] = useState([50,15000])
-
+    const [properties, setProperties] = useState(10)
 
 
 
@@ -37,7 +37,7 @@ function Content(props) {
     return (
         <div className="home-container content-base">
 
-            <div className="find-your-home">
+            <div className="find-your-home ">
                 <div className="text find-your-home-text">Find your Home</div>
 
                 <FindInput/>
@@ -83,7 +83,14 @@ function Content(props) {
 
             </div>
             <div className="properties">
-                test
+                <div className="found-section">
+                    <div className="found">
+                        <p>We found <span style={{color: "#0EC6D5"}}>{properties}</span> properties available for you </p>
+                    </div>
+                    <div className="sort-by">
+                        <p>Sort By</p>
+                    </div>
+                </div>
             </div>
         </div>
     );

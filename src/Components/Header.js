@@ -34,6 +34,7 @@ function MenuItem({item_data, onClick}){
             item_data.items && <i className="fas fa-angle-down"></i>
         }
         {
+
             item_data.items && <div  className="popup-menu">
 
                 {
@@ -79,7 +80,7 @@ function Header(item_data) {
 
                <img src={logo} alt=""/>
 
-               <div ><Menu/></div>
+               <div><Menu/></div>
 
 
            </div>
