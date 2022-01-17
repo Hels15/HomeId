@@ -9,26 +9,29 @@ import Header from "./Components/Header";
 import HeaderBottom from "./Components/HeaderBottom";
 import Content from "./Components/Content";
 import React from "react";
-
+import {CardHomeProvider} from "./Components/Contexts/ItemListContext";
+import {Image} from "@mui/icons-material";
+import ImageSlider from "./Components/Home/ImageSlider";
+import FullContent from "./Components/FullContent";
 
 function App() {
 
 
 
   return (
-      <div className="App">
+          <BrowserRouter>
+              <CardHomeProvider>
+                  <div className="App">
+                   <Header/>
+                    <HeaderBottom/>
+                    <br/>
+                     <FullContent/>
 
-              <BrowserRouter>
-                <Header/>
-                 <HeaderBottom/>
-                  <br/>
-                  <Content/>
-                <Footer/>
-              </BrowserRouter>
+                    <Footer/>
+                    </div>
 
-      </div>
-
-
+              </CardHomeProvider>
+          </BrowserRouter>
 
   );
 }

@@ -7,7 +7,17 @@
     {"id": 4, "title": "Docs", "items": ["Documentation", "UI Kit", "Changelog", "Support"]},
     {"id": 5, "title": "ENG", "items": null},
     {"id": 6, "title": "SIGN IN", "items":null}
-
+  ],
+  "slider": [
+    {"id":  0, "title":  "Villa on Hollywood Boulevard", "image": "https://i.ibb.co/7rzgc2N/properties-grid-03.jpg" ,
+      "display": true
+    },
+    {"id":  1, "title":  "Villa on  Hollywood  Royal Poinciana", "image": "https://i.ibb.co/7rzgc2N/properties-grid-03.jpg",
+      "display": true
+    },
+    {"id":  2, "title":  "Villa on Hollywood South central Beach", "image": "https://i.ibb.co/7rzgc2N/properties-grid-03.jpg",
+      "display": true
+    }
   ]
 
 

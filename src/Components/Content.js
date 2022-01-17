@@ -8,6 +8,7 @@ import Select from '@mui/material/Select';
 import FindInput from "./FindInput";
 import OtherFeatures from "./OtherFeatures";
 import Button from '@mui/material/Button';
+import ImageSlider from "./Home/ImageSlider";
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -78,7 +79,9 @@ function Content(props) {
                 </div>
                 <Button sx={{':hover':{
                     backgroundColor: 'rgba(7,11,152,0.42)'
-                    },margin: 2,left: -24, textAlign: "center", width: "100%", backgroundColor: "#0ec6d5"}} className="form-control-item custom-parent" variant="contained" size="large">Search</Button>
+                    },margin: 2,left: -24, textAlign: "center", width: "100%", backgroundColor: "#0ec6d5"}} className="form-control-item custom-parent" variant="contained" size="large">Search
+                </Button>
+
 
 
             </div>
