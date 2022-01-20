@@ -6,30 +6,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Box from '@mui/material/Box'
 import PropTypes from 'prop-types';
 
-function Item(props) {
-  const { sx, ...other } = props;
-  return (
-    <Box
-      sx={{
 
-      }}
-      {...other}
-    >
-
-     </Box>
-  );
-}
-
-Item.propTypes = {
-    sx: PropTypes.oneOfType([
-        PropTypes.arrayOf(
-            PropTypes.oneOfType([PropTypes.func,PropTypes.object, PropTypes.bool]),
-        ),
-            PropTypes.func,
-            PropTypes.object,
-
-    ]),
-};
 
 
 function FindInput(props) {
@@ -43,12 +20,6 @@ function FindInput(props) {
    })
 
 
-    const handleString = (object) =>{
-        if(typeof str === object){
-            return true
-        }
-        return false
-    }
     const handleChange = (e) => {
     const { name, value } = e.target;
     console.log(name)

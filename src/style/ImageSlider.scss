@@ -1,4 +1,4 @@
-.slider-container{
+.image-slider-container{
 
   height: auto;
   background-color: white;
@@ -8,14 +8,14 @@
   padding: 20px;
   overflow: hidden;
   position: relative;
-
   border-radius: 10px;
+  margin-bottom: 20px;
   .RadioGroup{
     display: flex;
     justify-content: center;
   }
   .items-flex{
-    display: flex;
+
     .actions{
       .left-step-button, .right-step-button{
     cursor: pointer;
@@ -29,9 +29,11 @@
    .left-step-button{
     right: 2rem;
      margin-right: 10px;
+
   }
   .right-step-button{
     right:0;
+
   }
 
     }
@@ -40,21 +42,87 @@
 
       font-size: 16px;
       color:black;
-      text-align: left !important;
+
 
     }
     }
   }
   .image-container {
+    position: relative;
       .slider-image-container{
-         .slider-image {
-      display: none;
-      height: 100%;
-      width: 100%;
-      margin-top: 20px;
-      border-radius: 10px;
+
+
+        .buttons{
+          margin: 10px;
+          position: absolute;
+          top: 20px;
+
+          display: flex;
+          justify-content: space-between;
+          gap: 15px;
+          width: max-content;
+          height: 40px;
+
+           .button{
+            width: 86px;
+            height: 25px;
+             border: none;
+            border-radius: 5px;
+            color: white;
+            &:hover{
+              cursor: pointer;
+            }
+             &.orange{
+               background-color:$image-slider-orange-color;
+               &:hover{
+                 background-color: #ff4d35;
+               }
+             }
+             &.purple{
+               background-color: $image-slider-purple-color;
+                &:hover{
+                 background-color: #1e58d7;
+               }
+             }
+        }
+
+        }
+        .content{
+          margin-left:10px ;
+          position: absolute;
+          top: 110px;
+          display: flex;
+          flex-direction: column;
+          .price{
+            color: white;
+
+          }
+          .Villa{
+            color: white;
+            font-weight: 600;
+
+          }
+          .San-Predro{
+            color: rgb(155,155,155);
+          }
+        }
+
+
+            .slider-image {
+            display: none;
+            height: 100%;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 10px;
+            position: relative;
+             -webkit-box-shadow: inset 0 0 10px 10px #000;
+          -moz-box-shadow: inset 0 0 10px 10px #000;
+           box-shadow: inset 20px 20px 200px 10px #d7526c;
 
     }
+
+
+
         .active {
       display: inherit;
     }
