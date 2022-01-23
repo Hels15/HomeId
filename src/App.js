@@ -7,14 +7,16 @@ import {
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import HeaderBottom from "./Components/HeaderBottom";
-import Content from "./Components/Content";
+import Content from "./Components/FindYourHome";
 import React from "react";
 import {CardHomeProvider} from "./Components/Contexts/ItemListContext";
 import {Image} from "@mui/icons-material";
 import ImageSlider from "./Components/Home/ImageSlider";
 import FullContent from "./Components/FullContent";
-
+import ScrollToTop from "./Components/Home/ScrollToTop";
 function App() {
+
+
 
 
 
@@ -22,11 +24,13 @@ function App() {
           <BrowserRouter>
               <CardHomeProvider>
                   <div className="App">
-                   <Header/>
+                   <Header id="header"/>
                     <HeaderBottom/>
                     <br/>
                      <FullContent/>
-
+                    <div className="move">
+                        <ScrollToTop/>
+                    </div>
                     <Footer/>
                     </div>
 

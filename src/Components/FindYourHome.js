@@ -9,7 +9,7 @@ import FindInput from "./FindInput";
 import OtherFeatures from "./OtherFeatures";
 import Button from '@mui/material/Button';
 import ImageSlider from "./Home/ImageSlider";
-
+import Card from "./Home/Card"
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -19,11 +19,12 @@ function valuetext(value) {
 }
 
 
-function Content(props) {
+function FindYourHome(props) {
     const [value,setValue] = useState([1000000,5000000])
     const [anotherValue,anotherSetValue] = useState([50,15000])
-    const [properties, setProperties] = useState(10)
 
+    const info = props.info
+    const setInfo = props.setInfo
 
 
     const handleChange = (event, newValue) => {
@@ -32,16 +33,17 @@ function Content(props) {
     const handleAreaChange = (event,newValue) => {
         anotherSetValue(newValue)
     }
+    const HandleSearch = () =>{
 
+    }
 
 
     return (
-        <div className="home-container content-base">
 
             <div className="find-your-home ">
                 <div className="text find-your-home-text">Find your Home</div>
 
-                <FindInput/>
+                <FindInput info={info} setInfo={setInfo} />
                 <div className="slider">
                     <Box sx={{ width: 300}}>
 
@@ -77,7 +79,7 @@ function Content(props) {
                 <div className="other-features">
                     <OtherFeatures/>
                 </div>
-                <Button sx={{':hover':{
+                <Button onClick={HandleSearch} sx={{':hover':{
                     backgroundColor: 'rgba(7,11,152,0.42)'
                     },margin: 2,left: -24, textAlign: "center", width: "100%", backgroundColor: "#0ec6d5"}} className="form-control-item custom-parent" variant="contained" size="large">Search
                 </Button>
@@ -85,18 +87,9 @@ function Content(props) {
 
 
             </div>
-            <div className="properties">
-                <div className="found-section">
-                    <div className="found">
-                        <p>We found <span style={{color: "#0EC6D5"}}>{properties}</span> properties available for you </p>
-                    </div>
-                    <div className="sort-by">
-                        <p>Sort By</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
     );
 }
 
-export default Content;
+export default FindYourHome;

@@ -95,13 +95,24 @@ function ImageSlider(props) {
             </RadioGroup>
 
                 <RadioGroup  className="RadioGroup" row >
-                    <Radio checked={current_index === 0} onChange={e => handlechange(0)}>
+                    <Radio sx={{color:"#333",
+                        '& .MuiSvgIcon-root':{fontSize: 20},
+                        '&.Mui-checked':{color: "#333"
+                        }}} checked={current_index === 0} onChange={e => handlechange(0)}>
+
+                    </Radio >
+                    <Radio sx={{color:"#333",
+                        '& .MuiSvgIcon-root':{fontSize: 20},
+                        '&.Mui-checked':{
+                        color: "#333"
+                        }}} checked={current_index === 1} onChange={e => handlechange(1)}>
 
                     </Radio>
-                    <Radio checked={current_index === 1} onChange={e => handlechange(1)}>
-
-                    </Radio>
-                    <Radio checked={current_index === 2} onChange={e => handlechange(2)}>
+                    <Radio sx={{color:"#333",
+                        '& .MuiSvgIcon-root':{fontSize: 20},
+                        '&.Mui-checked':{
+                        color: "#333"
+                        }}}checked={current_index === 2} onChange={e => handlechange(2)}>
 
                     </Radio>
                 </RadioGroup>

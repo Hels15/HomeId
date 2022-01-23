@@ -18,6 +18,31 @@
     {"id":  2, "title":  "Villa on Hollywood South central Beach", "image": "https://i.ibb.co/7rzgc2N/properties-grid-03.jpg",
       "display": true
     }
+  ],
+  "cards": [
+    {
+      "id": 0, "title": "Home in Metric Way", "price": 1250000, "subtitle": "1421 San Pedro St, Los Angeles", "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem", "beds": 3, "baths": 3,
+      "location": "Los Angeles",
+      "type": "Apartment",
+      "year": 2020, "for-sale": true
+    },
+    {
+      "id": 1, "title": "Garden Gingerbread House", "price": 1250000, "subtitle": "1421 San Pedro St, Los Angeles", "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem", "beds": 4, "baths": 2,  "location": "Los Angeles",
+      "type": "Office", "year": 2019, "for sale": false
+    },
+    {
+      "id": 2, "title": "Affordable Urban House", "price": 2500, "subtitle": "1421 San Pedro St, Los Angeles", "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem", "beds": 2, "baths": 4,  "location": "Los Angeles",
+      "type": "Shop", "year": 2021, "for-sale": true
+    },
+    {
+      "id": 3, "title": "Villa on Hollywood Boulevard", "price": 1250000, "subtitle": "1421 San Pedro St, Los Angeles", "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem", "beds": 5, "baths": 5,  "location": "Los Angeles",
+      "type": "Multi Family Home", "year": 2018, "for-sale": false
+    },
+    {
+      "id": 4, "title": "Explore Old Barcelona", "price": 2500, "subtitle": "1421 San Pedro St, Los Angeles", "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem", "beds": 1, "baths": 1,  "location": "Los Angeles",
+      "type": "Lot", "year": 2020, "for-sale": true
+    }
+
   ]
 
 

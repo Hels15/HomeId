@@ -9,15 +9,11 @@ import PropTypes from 'prop-types';
 
 
 
+
 function FindInput(props) {
      //select
-   const [info, setInfo] = useState({
-       city: "",
-       beds: "",
-       type: "",
-       status: "",
-       baths: ""
-   })
+    const info = props.info
+    const setInfo = props.setInfo
 
 
     const handleChange = (e) => {

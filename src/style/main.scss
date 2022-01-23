@@ -3,10 +3,12 @@
 @import "header";
 @import "content-base";
 @import "headerbottom";
-@import "content";
+@import "find-your-home";
 @import "form-control";
 @import "ImageSlider.scss";
 @import "FullContent";
+@import "_properties";
+
 html{
   height: 100%;
 }
@@ -26,6 +28,20 @@ body{
   background-color: $home-page-color;
   .App{
     min-height: 100vh;
+
+    .move{
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    color: aqua;
+    z-index: 100;
+    font-size: 40px;
+    transition: 0.04s opacity;
+    &:hover{
+      cursor: pointer;
+      color: #00e4ff;
+    }
+    }
   }
 }
 
