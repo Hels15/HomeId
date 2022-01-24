@@ -4,10 +4,6 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Box from '@mui/material/Box'
-import PropTypes from 'prop-types';
-
-
-
 
 
 function FindInput(props) {
@@ -135,14 +131,6 @@ function FindInput(props) {
                     </Select>
             </FormControl>
                 </Box>
-
-
-
-
-
-
-
-
 
         </div>
     );

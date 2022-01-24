@@ -10,10 +10,12 @@ function Card(props) {
     const info = props.info
     const setInfo = props.setInfo
 
+    const filteredRooms =  card_list.filter(data => (info.beds === "" || info.beds === data.beds) && (info.baths === "" || info.baths === data.baths) && (info.type === "" || info.type === data.type) &&  ( info.location === "" || info.location === data.city))
+    //console.log(filteredRooms.length)
     return (
         <div>
-            {card_list.map( data => <ItemCard key={data.id} data={data}/>)}
 
+            {filteredRooms.map(data => <ItemCard data={data}/>)}
         </div>
     );
 }

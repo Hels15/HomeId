@@ -1,7 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {CardHomeContext} from "../Contexts/ItemListContext"
 import Radio from '@mui/material/Radio';
-import Box from '@mui/material/Box'
 import RadioGroup from '@mui/material/RadioGroup';
 
 const FeaturedItemtext = {
@@ -116,8 +115,6 @@ function ImageSlider(props) {
 
                     </Radio>
                 </RadioGroup>
-
-
 
         </div>
     );

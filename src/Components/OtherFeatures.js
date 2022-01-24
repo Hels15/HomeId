@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
 import ListItemText from '@mui/material/ListItemText'
 import Checkbox from '@mui/material/Checkbox';
 import AddIcon from '@mui/icons-material/Add';
@@ -77,17 +76,8 @@ function OtherFeatures(props) {
 
           ))}
 
-
         </div>)
 
     }
-
-
-
-
-
-
-
-
 
 export default OtherFeatures;
