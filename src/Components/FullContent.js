@@ -14,6 +14,7 @@ function FullContent(props) {
        baths: ""
    })
 
+
     return (
         <div className="full-content">
             <div className="home-content">

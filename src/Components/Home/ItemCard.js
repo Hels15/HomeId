@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box'
-import {useState, useRef} from "react";
+import {useState, useRef, Fragment} from "react";
 
 
 import { FaBed } from "react-icons/fa"
@@ -69,7 +69,17 @@ function ItemCard({data}) {
                     <IconButton style={IconButtonStyle}>
                         <GiSandsOfTime/>{data.year}
                     </IconButton>
-                    <Button sx={{ transform: "translateX(300px)",backgroundColor: "#0ec6d5", width: "80px", height: "25px"}} variant="contained">
+                    {data.forSale === "ForSale"?
+
+                        <Fragment>
+                            <p>ForSale</p>
+                        </Fragment>
+                        :
+                        <Fragment>
+                            <p>For Rent</p>
+                        </Fragment>
+                    }
+                    <Button sx={{ transform: "translateX(220px)",backgroundColor: "#0ec6d5", width: "80px", height: "25px"}} variant="contained">
                         Test
                     </Button>
                 </CardActions>

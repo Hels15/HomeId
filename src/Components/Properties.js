@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Card from "./Home/Card";
-
+import {CardHomeContext} from "./Contexts/ItemListContext";
 function Properties(props) {
-    const [properties, setProperties] = useState(10)
+    const [properties, setProperties] = useState(0)
 
     const info = props.info
     const setInfo = props.setInfo
@@ -17,7 +17,7 @@ function Properties(props) {
                         <p>Sort By</p>
                     </div>
                 </div>
-                <Card info={info} setInfo={setInfo}/>
+                <Card info={info} setInfo={setInfo} properties={properties} setProperties={setProperties}/>
 
             </div>
     );

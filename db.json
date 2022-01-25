@@ -31,7 +31,8 @@
       "image": "https://i.ibb.co/9hcRZ2n/Home-in-Metric-Way.jpg",
       "location": "Los Angeles",
       "type": "Apartment",
-      "year": 2020, "for-sale": true,
+      "year": 2020,
+      "forSale": "ForSale",
       "garage": 2
     },
     {
@@ -44,7 +45,8 @@
       "baths": 4,
       "image": "https://i.ibb.co/PcK08Xr/Affordable-Urban-House.jpg",
       "location": "Los Angeles",
-      "type": "Office", "year": 2019, "for sale": false,
+      "type": "Office", "year": 2019,
+      "forSale": "ForRent",
       "garage": 1
     },
     {
@@ -57,7 +59,8 @@
       "baths": 4,
       "image": "https://i.ibb.co/PcK08Xr/Affordable-Urban-House.jpg",
       "location": "Los Angeles",
-      "type": "Shop", "year": 2021, "for-sale": true,
+      "type": "Shop", "year": 2021,
+      "forSale": "ForSale",
       "garage": 3
     },
     {
@@ -70,7 +73,8 @@
       "baths": 4,
       "image": "https://i.ibb.co/3s8Yykx/Villa-on-Hollywood-Boule-Vard.jpg",
       "location": "Los Angeles",
-      "type": "Multi Family Home", "year": 2018, "for-sale": false,
+      "type": "Multi Family Home", "year": 2018,
+      "forSale": "ForRent",
       "garage": 2
     },
     {
@@ -83,7 +87,8 @@
       "baths": 3,
       "image":"https://i.ibb.co/jLx55bH/Exolore-Old-Barcelolna.jpg",
       "location": "Los Angeles",
-      "type": "Lot", "year": 2020, "for-sale": true,
+      "type": "Lot", "year": 2020,
+      "forSale": "ForSale",
       "garage": 4
     }
 
