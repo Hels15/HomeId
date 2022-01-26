@@ -2,28 +2,10 @@ import React, {useEffect, useState}from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios"
 import logo from "../Images/logo_black_primary.png"
-import HeaderBottom from "./HeaderBottom";
+
 
 function MenuItem({item_data, onClick}){
-    //  const handleButton = (event) =>{
-    //       console.log("click")
-    //     if (!event.target.matches('.menu-item')) {
-    //         var dropdowns = document.getElementsByClassName(".popup-menu")
-    //         var i;
-    //         for(i=0; i< dropdowns.length; i++){
-    //             var openDropdown = dropdowns[i]
-    //             if(openDropdown.classList.contains("popup-menu")){
-    //                 openDropdown.classList.remove("popup-menu")
-    //             }
-    //         }
-    //     }
-    //     }
-    //
-    // if(onClick){
-    //     handleButton()
-    // }
 
-    const [grid_gap, set_grid_gap] = useState(false)
     const [menu_list, set_menu_list] = useState([])
 
 
@@ -49,8 +31,6 @@ function MenuItem({item_data, onClick}){
 }
 
 function Menu(){
-    const [padding,set_padding] = useState(false)
-
     const [menu_list, set_menu_list] = useState([])
 
      useEffect(() =>{
@@ -82,11 +62,7 @@ function Header(item_data) {
                 <div className="test-header">
                     <img src={logo} alt=""/>
                     <div><Menu/></div>
-
                 </div>
-
-
-
            </div>
        </div>
 

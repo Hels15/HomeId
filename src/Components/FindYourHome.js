@@ -1,15 +1,9 @@
 import React, {useState} from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import FindInput from "./FindInput";
 import OtherFeatures from "./OtherFeatures";
 import Button from '@mui/material/Button';
-import ImageSlider from "./Home/ImageSlider";
-import Card from "./Home/Card"
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -84,11 +78,7 @@ function FindYourHome(props) {
                     },margin: 2,left: -24, textAlign: "center", width: "100%", backgroundColor: "#0ec6d5"}} className="form-control-item custom-parent" variant="contained" size="large">Search
                 </Button>
 
-
-
             </div>
-
-
     );
 }
 

@@ -28,10 +28,7 @@ const names = [
 
 
 function OtherFeatures(props) {
-    const [opacity, set_opacity] = useState(0)
     const [display, set_display] = useState("none")
-    const [visibility, set_visibility] = useState("hidden")
-    const [checked, setChecked] = useState(false)
 
     const handleClick = (event) => {
         if(display === "none"){

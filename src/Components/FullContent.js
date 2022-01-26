@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Content from "./FindYourHome";
 import ImageSlider from "./Home/ImageSlider";
 import Properties from "./Properties";
 import FindYourHome from "./FindYourHome";
@@ -13,7 +12,6 @@ function FullContent(props) {
        status: "",
        baths: ""
    })
-
 
     return (
         <div className="full-content">

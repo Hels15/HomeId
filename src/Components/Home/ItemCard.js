@@ -1,4 +1,3 @@
-import React, {useEffect} from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -6,20 +5,21 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box'
-import {useState, useRef, Fragment} from "react";
+import Fragment from "react";
 
 
 import { FaBed } from "react-icons/fa"
 import {FaBath} from "react-icons/fa"
+
 import {GiHomeGarage} from "react-icons/gi"
 import {GiSandsOfTime} from "react-icons/gi"
 
 const IconButtonStyle = {
-    fontSize: "13px"
+    fontSize: "13px",
+
 }
 
 function ItemCard({data}) {
-
 
     return (
         <div className="item-card-container">
@@ -55,32 +55,49 @@ function ItemCard({data}) {
 
 
                 </CardActionArea>
-                <CardActions>
+                <CardActions sx={{marginLeft: 0}}>
                     <IconButton style={IconButtonStyle}>
-                        <FaBed/>{data.beds}
+                        <FaBed/>
                     </IconButton>
-                    <IconButton style={IconButtonStyle}>
-                        <FaBath sx={{marginRight: "3px"}}/>
-                        {data.baths}
-                    </IconButton>
-                    <IconButton style={IconButtonStyle}>
-                        <GiHomeGarage/>{data.garage}
-                    </IconButton>
-                    <IconButton style={IconButtonStyle}>
-                        <GiSandsOfTime/>{data.year}
-                    </IconButton>
-                    {data.forSale === "ForSale"?
+                    <div className="iconButton-text">
+                        {data.beds} Br
+                    </div>
 
-                        <Fragment>
-                            <p>ForSale</p>
-                        </Fragment>
-                        :
-                        <Fragment>
-                            <p>For Rent</p>
-                        </Fragment>
-                    }
-                    <Button sx={{ transform: "translateX(220px)",backgroundColor: "#0ec6d5", width: "80px", height: "25px"}} variant="contained">
-                        Test
+                    <IconButton style={IconButtonStyle}>
+                        <FaBath/>
+
+                    </IconButton>
+                    <div className="iconButton-text">
+                        {data.baths} Ba
+                    </div>
+
+                    <IconButton style={IconButtonStyle}>
+                        <GiHomeGarage/>
+                    </IconButton >
+                    <div className="iconButton-text">
+                        {data.garage} Gr
+                    </div>
+
+                    <IconButton style={IconButtonStyle}>
+                        <GiSandsOfTime/>
+                    </IconButton>
+                    <div className="iconButton-text">
+                         {data.year}
+                    </div>
+
+
+                    <Button sx={{ transform: "translateX(230px)",backgroundColor: data.forSale === "ForSale" ? "#0ec6d5": "#6969eb", width: "auto", height: "25px"}} variant="contained">
+                        {data.forSale === "ForSale" ?
+                            <Fragment>
+                                <p>For Sale</p>
+                            </Fragment>
+                            :
+
+                            <Fragment>
+
+                                <p>For Rent</p>
+                            </Fragment>
+                        }
                     </Button>
                 </CardActions>
             </Card>
