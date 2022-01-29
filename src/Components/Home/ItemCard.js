@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box'
-import Fragment from "react";
+import {Fragment} from "react";
 
 
 import { FaBed } from "react-icons/fa"

@@ -13,9 +13,6 @@ import FullContent from "./Components/FullContent";
 import ScrollToTop from "./Components/Home/ScrollToTop";
 function App() {
 
-
-
-
   return (
           <BrowserRouter>
               <CardHomeProvider>

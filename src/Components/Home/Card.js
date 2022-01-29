@@ -1,7 +1,4 @@
 import React, {useContext} from 'react';
-import axios from "axios";
-import {Link} from "react-router-dom"
-import info from "../FindInput"
 import {CardHomeContext} from "../Contexts/ItemListContext";
 import ItemCard from "./ItemCard";
 
