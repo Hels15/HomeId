@@ -55,7 +55,10 @@ function FindInput(props) {
     }
 
     return (
-        <div className="form-control">
+        <div className="form-control" style={{
+              width: data.inline ? "155px" : "100%",
+              display: data.inline ? "inline-block" : "block"
+          }}>
 
             {!data.inline?
 
@@ -71,7 +74,7 @@ function FindInput(props) {
                         name={data.name}
 
                         label={data.label}
-                        id="demo-simple-select-city-id"
+                        id={data.NameID}
 
                         value={handleValue(data.name)}
                         onChange={(e) => handleChange(e)}
@@ -86,8 +89,8 @@ function FindInput(props) {
                 :
                 // if inline is true
                 <Fragment>
-                 <Box className="box-container custom-parent" sx={{display:"flex"}}>
-                <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
+
+                <FormControl className="form-control-item special" sx={{paddingBottom: 5}}>
 
                 <InputLabel id="demo-simple-select-label-beds">{data.label}</InputLabel>
                 <Select sx={{ "& .MuiSelect-nativeInput":{
@@ -95,7 +98,7 @@ function FindInput(props) {
                         }}}
                         name={data.name}
                         label={data.label}
-                        id="demo-simple-select-beds-id"
+                        id={data.nameID}
                         value={handleValue(data.name)}
                         onChange={(e) => handleChange(e)}
 
@@ -104,7 +107,7 @@ function FindInput(props) {
 
                     </Select>
                  </FormControl>
-                     </Box>
+
                     </Fragment>
 
             }

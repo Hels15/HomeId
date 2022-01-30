@@ -36,19 +36,21 @@
   ],
   "find-input": [
     {
-      "id": 0, "label": "Location", "name": "city", "items": ["Austin", "Boston", "Chicago", "Denver", "Los Angeles", "New York", "San Francisco"], "inline": false
+      "id": 0,
+      "nameId": "demo-simple-select-city-id",
+      "label": "Location", "name": "city", "items": ["Austin", "Boston", "Chicago", "Denver", "Los Angeles", "New York", "San Francisco"], "inline": false
     },
     {
-      "id": 1, "label": "All Types", "name": "type", "items":["Apartment", "Cando", "Lot", "Multi Family Home", "Office", "Shop"],"inline": false
+      "id": 1, "nameID":"demo-simple-types-id", "label": "All Types", "name": "type", "items":["Apartment", "Cando", "Lot", "Multi Family Home", "Office", "Shop"],"inline": false
     },
     {
-      "id": 2, "label": "All Status", "name": "status", "items": ["For Rent", "For Sale"],"inline": false
+      "id": 2,"nameID":"demo-simple-status-id", "label": "All Status", "name": "status", "items": ["For Rent", "For Sale"],"inline": false
     },
     {
-      "id": 3, "label": "Beds", "name": "beds", "items": [3,4], "inline": true
+      "id": 3,"nameID":"demo-simple-beds-id", "label": "Beds", "name": "beds", "items": [3,4], "inline": true
     },
     {
-      "id": 4, "label": "Baths", "name": "baths", "items": [3,4], "inline": true
+      "id": 4,"nameID":"demo-simple-baths-id", "label": "Baths", "name": "baths", "items": [3,4], "inline": true
     }
   ],
   "properties": [

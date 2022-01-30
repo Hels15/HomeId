@@ -35,9 +35,12 @@ function FindYourHome(props) {
 
             <div className="find-your-home ">
                 <div className="text find-your-home-text">Find your Home</div>
-                {
+                <div style={{width: "100%"}}>
+                    {
                     find_input.map(data=> <FindInput info={info} setInfo={setInfo} data={data} />)
                 }
+                </div>
+
 
                 <div className="slider">
                     <Box sx={{ width: 300}}>
