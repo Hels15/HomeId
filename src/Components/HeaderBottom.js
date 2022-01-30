@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
+
 
 function handleClick(event) {
   event.preventDefault();
@@ -9,17 +10,20 @@ function handleClick(event) {
 }
 
 function HeaderBottom(props) {
+    const data = props.data
+
     return (
         <div className="header-bottom" role="presentation" onClick={handleClick}>
             <div className="content-base">
                 <Breadcrumbs aria-label="breadcrumb">
                 <Link underline="hover" color="#ABABAB" href="/">
-                    Home
+                    {data.under_line_text}
+
                 </Link>
-                <Typography color="text.primary">Listing</Typography>
+                <Typography color="text.primary">{data.primary_text}</Typography>
             </Breadcrumbs>
             <br/>
-            <div className="filter-text">Listing With Left Filter</div>
+            <div className="filter-text"></div>
             </div>
 
         </div>

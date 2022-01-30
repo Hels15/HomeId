@@ -11,8 +11,8 @@
   "header-bottom": [
     {
       "id":0,
-      "under-line-text": "Home",
-      "primary-text": "Listing",
+      "under_line_text": "Home",
+      "primary_text": "Listing",
       "filter-text":  "Listing With Left Filter"
     }
 

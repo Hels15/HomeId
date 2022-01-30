@@ -7,18 +7,21 @@ import {
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import HeaderBottom from "./Components/HeaderBottom";
-import React from "react";
-import {CardHomeProvider} from "./Components/Contexts/ItemListContext";
+import React, {useContext} from "react";
+import {CardHomeContext, CardHomeProvider} from "./Components/Contexts/ItemListContext";
 import FullContent from "./Components/FullContent";
 import ScrollToTop from "./Components/Home/ScrollToTop";
 function App() {
-
+  const {header_bottom} = useContext(CardHomeContext)
   return (
           <BrowserRouter>
               <CardHomeProvider>
                   <div className="App">
                    <Header id="header"/>
-                    <HeaderBottom/>
+                      {
+                          header_bottom.map(data => <HeaderBottom key={data.id} data={data}/>)
+                      }
+
                     <br/>
                      <FullContent/>
                     <div className="move">
