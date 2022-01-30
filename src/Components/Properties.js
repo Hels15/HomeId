@@ -6,12 +6,12 @@ function Properties(props) {
 
     const info = props.info
     const setInfo = props.setInfo
-
+    const data = props.data
     return (
          <div className="properties">
                 <div className="found-section">
                     <div className="found">
-                        <p>We found <span style={{color: "#0EC6D5"}}>{properties}</span> properties available for you </p>
+                        <p>{data.bellow_text}<span style={{color: "#0EC6D5"}}>{properties}</span>{data.after_text}</p>
                     </div>
                     <div className="sort-by">
                         <p>Sort By</p>

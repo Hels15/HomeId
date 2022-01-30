@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import FindInput from "./FindInput";
 import OtherFeatures from "./OtherFeatures";
 import Button from '@mui/material/Button';
+import {CardHomeContext} from "./Contexts/ItemListContext";
+
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
@@ -14,6 +16,7 @@ function valuetext(value) {
 
 
 function FindYourHome(props) {
+    const {find_input} = useContext(CardHomeContext)
     const [value,setValue] = useState([1000000,5000000])
     const [anotherValue,anotherSetValue] = useState([50,15000])
 
@@ -27,17 +30,15 @@ function FindYourHome(props) {
     const handleAreaChange = (event,newValue) => {
         anotherSetValue(newValue)
     }
-    const HandleSearch = () =>{
-
-    }
-
 
     return (
 
             <div className="find-your-home ">
                 <div className="text find-your-home-text">Find your Home</div>
+                {
+                    find_input.map(data=> <FindInput info={info} setInfo={setInfo} data={data} />)
+                }
 
-                <FindInput info={info} setInfo={setInfo} />
                 <div className="slider">
                     <Box sx={{ width: 300}}>
 
@@ -73,7 +74,7 @@ function FindYourHome(props) {
                 <div className="other-features">
                     <OtherFeatures/>
                 </div>
-                <Button onClick={HandleSearch} sx={{':hover':{
+                <Button  sx={{':hover':{
                     backgroundColor: 'rgba(7,11,152,0.42)'
                     },margin: 2,left: -24, textAlign: "center", width: "100%", backgroundColor: "#0ec6d5"}} className="form-control-item custom-parent" variant="contained" size="large">Search
                 </Button>

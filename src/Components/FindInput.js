@@ -4,13 +4,13 @@ import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import Box from '@mui/material/Box'
-
+import {Fragment} from "react";
 
 function FindInput(props) {
      //select
     const info = props.info
     const setInfo = props.setInfo
-
+    const data = props.data
 
     const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,7 +18,25 @@ function FindInput(props) {
     setInfo({ ...info, [name]: value });
   };
 
+    const handleValue = (name) =>{
 
+        if(name === "city"){
+             return info.city
+        }
+        if(name === "type"){
+            return info.type
+        }
+        if(name === "status"){
+            return info.status
+        }
+        if(name === "beds"){
+            return info.beds
+        }
+        if(name === "baths"){
+            return info.baths
+        }
+
+    }
     const cities = ["Austin", "Boston", "Chicago", "Denver", "Los Angeles", "New York", "San Francisco"]
     const types= ["Apartment", "Cando", "Lot", "Multi Family Home", "Office", "Shop"]
     const statuses = ["For Rent", "For Sale"]
@@ -38,99 +56,59 @@ function FindInput(props) {
 
     return (
         <div className="form-control">
-             <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
 
-                    <InputLabel id="demo-simple-select-label">Location</InputLabel>
+            {!data.inline?
+
+                <Fragment>
+                     <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
+
+                    <InputLabel id="demo-simple-select-label">{data.label}</InputLabel>
                     <Select className="select" sx={{
                         "& .MuiSelect-nativeInput":{
                         width: 0
                         }}
                     }
-                        name="city"
+                        name={data.name}
 
-                        label="Location"
+                        label={data.label}
                         id="demo-simple-select-city-id"
-                        value={info.city}
+
+                        value={handleValue(data.name)}
                         onChange={(e) => handleChange(e)}
 
                     >
 
-                        {createMenus(cities)}
+                        {createMenus(data.items)}
 
                     </Select>
                 </FormControl>
+                </Fragment>
+                :
+                // if inline is true
+                <Fragment>
+                 <Box className="box-container custom-parent" sx={{display:"flex"}}>
                 <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
 
-                    <InputLabel id="demo-simple-select-label-types">All Types</InputLabel>
-                    <Select sx={{"& .MuiSelect-nativeInput":{
+                <InputLabel id="demo-simple-select-label-beds">{data.label}</InputLabel>
+                <Select sx={{ "& .MuiSelect-nativeInput":{
                         width: 0
                         }}}
-                        name="type"
-                        label="All Types"
-                        id="demo-simple-select-types-id"
-                        value={info.type}
-                        onChange={(e) => handleChange(e)}
-
-                    >
-                        {createMenus(types)}
-
-                    </Select>
-                </FormControl>
-                 <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
-                    <InputLabel id="demo-simple-select-label-status">All Status</InputLabel>
-
-                    <Select sx={{"& .MuiSelect-nativeInput":{
-                        width: 0
-                        }}}
-                        name="status"
-                        label="All Status"
-                        id="demo-simple-select-status-id"
-                        value={info.status}
-                        onChange={(e) => handleChange(e)}
-
-                    >
-                        {createMenus(statuses)}
-
-                    </Select>
-                 </FormControl>
-                <Box className="box-container custom-parent" sx={{display:"flex", }}>
-                    <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
-
-                    <InputLabel id="demo-simple-select-label-beds">Beds</InputLabel>
-                    <Select sx={{ "& .MuiSelect-nativeInput":{
-                        width: 0
-                        }}}
-                        name="beds"
-                        label="Beds"
+                        name={data.name}
+                        label={data.label}
                         id="demo-simple-select-beds-id"
-                        defaultValue="test"
-                        value={info.beds}
+                        value={handleValue(data.name)}
                         onChange={(e) => handleChange(e)}
 
                     >
-                        {createMenus(bedsArray)}
+                        {createMenus(data.items)}
 
                     </Select>
                  </FormControl>
-            <FormControl className="form-control-item" sx={{paddingBottom: 5}}>
+                     </Box>
+                    </Fragment>
 
-                    <InputLabel id="demo-simple-select-label-beds">Baths</InputLabel>
-                    <Select sx={{ "& .MuiSelect-nativeInput":{
-                        width: 0
-                        }
-                    }}
-                        name="baths"
-                        id="demo-simple-select-baths-id"
-                        label="Baths"
-                        value={info.baths}
-                        onChange={(e) => handleChange(e)}
+            }
 
-                    >
-                        {createMenus(bathsArray)}
-
-                    </Select>
-            </FormControl>
-                </Box>
 
         </div>
     );

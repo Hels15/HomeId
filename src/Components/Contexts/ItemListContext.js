@@ -75,7 +75,7 @@ export const CardHomeProvider = (props) => {
     useEffect( () =>{
         fetch_card_list()
         fetch_grid_list()
-
+        fetch_header_bottom()
         fetch_find_your_home()
         fetch_other_features()
         fetch_find_input()
@@ -84,9 +84,6 @@ export const CardHomeProvider = (props) => {
         fetch_footer()
     }, [])
 
-    useEffect(() =>{
-        fetch_header_bottom()
-    },[])
 
     return(
         <CardHomeContext.Provider value={{

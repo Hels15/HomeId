@@ -13,7 +13,7 @@
       "id":0,
       "under_line_text": "Home",
       "primary_text": "Listing",
-      "filter-text":  "Listing With Left Filter"
+      "filter_text":  "Listing With Left Filter"
     }
 
   ],
@@ -53,7 +53,7 @@
   ],
   "properties": [
     {
-      "id": 0, "bellow-text": "We found", "after-text": "properties available for you"
+      "id": 0, "bellow_text": "We found ", "after_text": " properties available for you"
     }
   ],
   "sort-by": [

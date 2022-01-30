@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
+import {CardHomeContext} from "./Contexts/ItemListContext";
 
 
 function handleClick(event) {
@@ -11,6 +12,7 @@ function handleClick(event) {
 
 function HeaderBottom(props) {
     const data = props.data
+
 
     return (
         <div className="header-bottom" role="presentation" onClick={handleClick}>
@@ -23,7 +25,7 @@ function HeaderBottom(props) {
                 <Typography color="text.primary">{data.primary_text}</Typography>
             </Breadcrumbs>
             <br/>
-            <div className="filter-text"></div>
+            <div className="filter-text">{data.filter_text}</div>
             </div>
 
         </div>

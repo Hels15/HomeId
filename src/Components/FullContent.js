@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import ImageSlider from "./Home/ImageSlider";
 import Properties from "./Properties";
 import FindYourHome from "./FindYourHome";
+import {CardHomeContext} from "./Contexts/ItemListContext";
 
 function FullContent(props) {
-
+    const {properties} = useContext(CardHomeContext)
      const [info, setInfo] = useState({
        city: "",
        beds: "",
@@ -25,7 +26,10 @@ function FullContent(props) {
                     </div>
                 </div>
                 <div>
-                    <Properties info={info} setInfo={setInfo}/>
+                    {
+                        properties.map(data =>  <Properties info={info} setInfo={setInfo} data={data}/>)
+                    }
+
                 </div>
 
 
