@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import {Link} from "react-router-dom";
-import logo from "../Images/logo-white-primary.png"
-function Footer(props) {
 
+import logo from "../Images/logo-white-primary.png"
+import {CardHomeContext} from "./Contexts/ItemListContext";
+function Footer(props) {
 
     return (
         <div className="footer-container" >
                     <div className="footer-items content-base">
+
                     <img className="footer-image footer-links" src={logo} alt="logo"/>
+
+
                     <div className="footer-text">58 Howard Street #2 San Francisco</div>
                     <div ><Link  to="" className="footer-text footer-links">contact@homeid.com</Link></div>
                     <div className="footer-text footer-title footer-links">(+68)1221 09876</div>

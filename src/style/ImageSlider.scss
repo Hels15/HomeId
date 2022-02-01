@@ -105,14 +105,57 @@
           .price{
             color: white;
             margin-bottom: 10px;
+            position: relative;
+            .price-text{
+
+              position: absolute;
+              top: -1.1px;
+              left: 40px
+            }
+
+            .slider-content-price{
+               position: relative;
+              display: none;
+              height: 100%;
+              width: 100%;
+            }
+            .active{
+              display: inherit;
+              transition-duration: 1s;
+            }
           }
           .Villa{
             color: white;
             font-weight: 600;
 
+            .slider-content-text{
+              position: relative;
+              display: none;
+              height: 100%;
+              width: 100%;
+
+            }
+
+            .active{
+              display: inherit;
+              transition-duration: 1s;
+
+            }
+
           }
           .San-Predro{
             color: rgb(155,155,155);
+
+            .slider-content-location{
+              position: relative;
+              display: none;
+              height: 100%;
+              width: 100%;
+            }
+            .active{
+              display: inherit;
+              transition-duration: 1s;
+            }
           }
         }
 

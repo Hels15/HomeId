@@ -13,6 +13,7 @@ import FullContent from "./Components/FullContent";
 import ScrollToTop from "./Components/Home/ScrollToTop";
 function App() {
   const {header_bottom} = useContext(CardHomeContext)
+  const {footer} = useContext(CardHomeContext)
   return (
           <BrowserRouter>
               <CardHomeProvider>
@@ -27,7 +28,12 @@ function App() {
                     <div className="move">
                         <ScrollToTop/>
                     </div>
-                    <Footer/>
+
+                     <Footer/>
+
+
+
+
                     </div>
 
               </CardHomeProvider>

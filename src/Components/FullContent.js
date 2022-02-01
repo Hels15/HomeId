@@ -6,6 +6,9 @@ import {CardHomeContext} from "./Contexts/ItemListContext";
 
 function FullContent(props) {
     const {properties} = useContext(CardHomeContext)
+    const {find_your_home} = useContext(CardHomeContext)
+    const {home_list} = useContext(CardHomeContext)
+
      const [info, setInfo] = useState({
        city: "",
        beds: "",
@@ -18,11 +21,13 @@ function FullContent(props) {
         <div className="full-content">
             <div className="home-content">
                 <div className="content-base">
+                    {find_your_home.map(data => <FindYourHome info={info} setInfo={setInfo} data={data}/>)}
 
-                         <FindYourHome info={info} setInfo={setInfo}/>
 
                      <div className="full-content-image-slider">
-                        <ImageSlider/>
+                         {
+                            <ImageSlider/>
+                         }
                     </div>
                 </div>
                 <div>

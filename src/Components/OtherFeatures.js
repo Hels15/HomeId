@@ -5,30 +5,13 @@ import ListItemText from '@mui/material/ListItemText'
 import Checkbox from '@mui/material/Checkbox';
 import AddIcon from '@mui/icons-material/Add';
 
-
-const names = [
-  'Air Conditioning',
-  'Laundry',
-  'Refrigerator',
-  'Washer',
-  'Barbeque',
-  'Lawn',
-  'Sauna',
-  'Wifi',
-  'Dryer',
-  'Microwave',
-   "Swimming Pool",
-   "Window Coverings",
-    "Gym",
-    "Outdoor Shower",
-    "Tv Cable",
-];
-
-
-
-
 function OtherFeatures(props) {
     const [display, set_display] = useState("none")
+
+    const data = props.data
+
+    const names = data.items
+
 
     const handleClick = (event) => {
         if(display === "none"){
@@ -51,7 +34,7 @@ function OtherFeatures(props) {
             startIcon={<AddIcon/>}
 
             >
-                Other Features
+                {data.title}
             </Button>
 
             {names.map((name) => (

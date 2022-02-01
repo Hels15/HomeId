@@ -24,8 +24,12 @@ const Arrows = {
 
 function ImageSlider(props) {
     const {home_list} = useContext(CardHomeContext)
+    const {slider_content} = useContext(CardHomeContext)
     const [current_index, set_current_index] = useState(0)
     const [home_slider_list, set_home_slider_list] = useState([])
+    const [slider_content_title, set_slider_content_title] = useState([])
+    const [slider_content_location, set_slider_content_location] = useState([])
+    const [slider_content_price, set_slider_content_price] = useState([])
 
     const step_action = (value) => {
         let _index = current_index
@@ -44,12 +48,24 @@ function ImageSlider(props) {
     const fetch_slider_list = () => {
         set_home_slider_list(home_list.filter(item => item.display))
     }
+    const fetch_content_title = () => {
+        set_slider_content_title(home_list.filter(item => item.title))
+    }
+    const fetch_content_location = () =>{
+        set_slider_content_location(home_list.filter(item => item.location))
+    }
 
+    const fetch_content_price = () => {
+        set_slider_content_price(home_list.filter(item => item.price))
+    }
     useEffect(() => {
         fetch_slider_list()
+        fetch_content_title()
+        fetch_content_location()
+        fetch_content_price()
     }, [home_list])
 
-    const handlechange = (num) => {
+    const handleChange = (num) => {
      set_current_index(num)
     }
     useEffect(() => {
@@ -61,7 +77,12 @@ function ImageSlider(props) {
             <div style={WrapperStyles}>
                  <div className="featured-Item-text" style={FeaturedItemtext
                  }>
-                <h1 className="Featured-Item">Featured Properties</h1>
+                <h1 className="Featured-Item">{
+                        slider_content.map((data) =>
+                            <p>{data.featured_text}</p>
+                        )
+                }
+                </h1>
                 </div>
 
                 <div className="actions" style={Arrows}>
@@ -78,13 +99,30 @@ function ImageSlider(props) {
                          home_slider_list.map((item, index)=> <img key={item.id} className={`slider-image ${current_index === index? "active": ""}`} src={item.image} alt=""/> )
                 }
                 <div className="buttons">
-                    <button className="button orange">FEATURED</button>
-                    <button className="button purple">FOR RENT</button>
+                    <button className="button orange">{
+                        slider_content.map((data) =>
+                            <p>{data.orange_text}</p>
+                        )
+                    }</button>
+                    <button className="button purple">
+                        {
+                        slider_content.map((data) =>
+                            <p>{data.purple_text}</p>
+                        )
+                    }
+                    </button>
                 </div>
                  <div className="content">
-                     <p className="Villa">Villa on Hollywood Boulevard</p>
-                     <p className="San-Predro">14212 San Predro St, Los Angeles</p>
-                     <p className="price"><span style={{fontWeight:"600"}}>$2500</span>/month</p>
+                     <p className="Villa">{
+                         slider_content_title.map((item, index)=> <p  className={`slider-content-text ${current_index === index? "active": ""}`} key={item.id}>{item.title}</p>)
+                     }</p>
+                     <p className="San-Predro">
+                         {slider_content_location.map((item, index)=> <p className={`slider-content-location ${current_index === index ? "active": ""}`} key={item.id}>{item.location}</p>)}</p>
+                     <p className="price"><span style={{fontWeight:"600"}}>{slider_content_price.map((item,index) => <p key={item.id} className={`slider-content-price ${current_index === index ? "active": ""}`}>{item.price}</p>)}</span>{
+                          slider_content.map((data) =>
+                            <p className="price-text">{data.month_text}</p>
+                        )
+                     }</p>
                  </div>
                 </div>
 
@@ -97,21 +135,21 @@ function ImageSlider(props) {
                     <Radio sx={{color:"#333",
                         '& .MuiSvgIcon-root':{fontSize: 20},
                         '&.Mui-checked':{color: "#333"
-                        }}} checked={current_index === 0} onChange={e => handlechange(0)}>
+                        }}} checked={current_index === 0} onChange={e => handleChange(0)}>
 
                     </Radio >
                     <Radio sx={{color:"#333",
                         '& .MuiSvgIcon-root':{fontSize: 20},
                         '&.Mui-checked':{
                         color: "#333"
-                        }}} checked={current_index === 1} onChange={e => handlechange(1)}>
+                        }}} checked={current_index === 1} onChange={e => handleChange(1)}>
 
                     </Radio>
                     <Radio sx={{color:"#333",
                         '& .MuiSvgIcon-root':{fontSize: 20},
                         '&.Mui-checked':{
                         color: "#333"
-                        }}}checked={current_index === 2} onChange={e => handlechange(2)}>
+                        }}}checked={current_index === 2} onChange={e => handleChange(2)}>
 
                     </Radio>
                 </RadioGroup>

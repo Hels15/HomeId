@@ -17,12 +17,13 @@ function valuetext(value) {
 
 function FindYourHome(props) {
     const {find_input} = useContext(CardHomeContext)
+    const {other_features} = useContext(CardHomeContext)
     const [value,setValue] = useState([1000000,5000000])
     const [anotherValue,anotherSetValue] = useState([50,15000])
 
     const info = props.info
     const setInfo = props.setInfo
-
+    const data = props.data
 
     const handleChange = (event, newValue) => {
         setValue(newValue)
@@ -45,37 +46,38 @@ function FindYourHome(props) {
                 <div className="slider">
                     <Box sx={{ width: 300}}>
 
-                        <p className="slider-title">Price Range</p>
+                        <p className="slider-title">{data.price_range}</p>
                              <Slider
                                     value={value}
                                     onChange={handleChange}
-                                    min={0}
-                                    max={8000000}
+                                    min={data.fist_min_price}
+                                    max={data.fist_max_price}
                                     valueLabelDisplay="auto"
                                     getAriaValueText={valuetext}
                                     valueLabelFormat={valuetext}
                                     color="secondary"
                         >
                         </Slider>
-                        <p className="slider-price-style">${numberWithCommas(value[0])} to ${numberWithCommas(value[1])}</p>
-                         <p className="slider-title">Area size</p>
+                        <p className="slider-price-style">${numberWithCommas(value[0])}{data.slider_space}${numberWithCommas(value[1])}</p>
+                         <p className="slider-title">{data.area_size}</p>
                              <Slider
                                     value={anotherValue}
                                     onChange={handleAreaChange}
-                                    min={0}
-                                    max={15000}
+                                    min={data.second_min_price}
+                                    max={data.second_max_price}
                                     valueLabelDisplay="auto"
                                     getAriaValueText={valuetext}
                                     valueLabelFormat={valuetext}
                                     color="secondary"
                         >
                         </Slider>
-                        <p className="slider-price-style">${numberWithCommas(anotherValue[0])} sqft to ${numberWithCommas(anotherValue[1])} sqft</p>
+                        <p className="slider-price-style">${numberWithCommas(anotherValue[0])}{data.sqft_to}${numberWithCommas(anotherValue[1])}{data.sqft}</p>
                     </Box>
 
                 </div>
                 <div className="other-features">
-                    <OtherFeatures/>
+                    {other_features.map(data =>  <OtherFeatures data={data}/>)}
+
                 </div>
                 <Button  sx={{':hover':{
                     backgroundColor: 'rgba(7,11,152,0.42)'

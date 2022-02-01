@@ -14,7 +14,14 @@ export const CardHomeProvider = (props) => {
     const [properties, set_properties] = useState([])
     const [sort_by, set_sort_by] = useState([])
     const [footer, set_footer] = useState([])
+    const [slider_content, set_slider_content] = useState([])
 
+    const fetch_slider_content = () =>{
+        axios({
+            method: "get",
+            url:`${process.env.REACT_APP_API_UR}/slider_content/`
+        }).then(res => set_slider_content(res.data))
+    }
     const fetch_grid_list = () =>{
         axios({
             method: "get",
@@ -82,6 +89,7 @@ export const CardHomeProvider = (props) => {
         fetch_properties()
         fetch_sort_by()
         fetch_footer()
+        fetch_slider_content()
     }, [])
 
 
@@ -95,7 +103,8 @@ export const CardHomeProvider = (props) => {
             find_input: find_input,
             properties: properties,
             sort_by:sort_by,
-            footer:footer
+            footer:footer,
+            slider_content: slider_content
         }}>
             {props.children}
         </CardHomeContext.Provider>
