@@ -16,6 +16,12 @@ export const CardHomeProvider = (props) => {
     const [footer, set_footer] = useState([])
     const [slider_content, set_slider_content] = useState([])
 
+
+
+
+
+
+
     const fetch_slider_content = () =>{
         axios({
             method: "get",

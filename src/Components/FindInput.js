@@ -3,7 +3,6 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import Box from '@mui/material/Box'
 import {Fragment} from "react";
 
 function FindInput(props) {
@@ -37,11 +36,6 @@ function FindInput(props) {
         }
 
     }
-    const cities = ["Austin", "Boston", "Chicago", "Denver", "Los Angeles", "New York", "San Francisco"]
-    const types= ["Apartment", "Cando", "Lot", "Multi Family Home", "Office", "Shop"]
-    const statuses = ["For Rent", "For Sale"]
-    const bedsArray = [3,4]
-    const bathsArray = [3,4]
     const createMenus = (listname) => {
         const items = []
         for (let i = 0; i < listname.length; i++) {
