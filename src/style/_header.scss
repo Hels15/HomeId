@@ -6,6 +6,18 @@
 
     display: grid;
     grid-template-columns: auto auto auto;
+    .input-label{
+
+    }
+    .flex-icons{
+      position: relative;
+      width: auto;
+      display: flex;
+      justify-content: space-between;
+      i{
+        top: -5px
+      }
+    }
   }
 
   img{
