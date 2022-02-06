@@ -2,6 +2,7 @@
   background-color: white;
   position: relative;
   width: 100% ;
+
   .test-header{
 
     display: grid;
@@ -9,14 +10,8 @@
     .input-label{
 
     }
-    .flex-icons{
-      position: relative;
-      width: auto;
-      display: flex;
-      justify-content: space-between;
-      i{
-        top: -5px
-      }
+    .popup-text{
+      padding: 10px !important;
     }
   }
 

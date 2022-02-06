@@ -1,6 +1,6 @@
 .image-slider-container{
 
-  height: auto;
+  height: auto ;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,7 @@
   overflow: hidden;
   position: relative;
   border-radius: 10px;
+  margin-left: 135px;
   margin-bottom: 20px;
   .RadioGroup{
     display: flex;

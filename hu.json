@@ -1,0 +1,221 @@
+{
+  "categories": [
+    {"id":  0, "title": "Kezdőlap", "items" :  ["Otthon01","Otthon02","Otthon03","Otthon04", "Otthon05", "Otthon06", "Otthon07", "Otthon08"]},
+    {"id":  1, "title": "Tulajdonságok", "items" :  ["Listview","GridView","Map style","Single Property"]},
+    {"id": 2,"title": "Dashboard","items": ["Dashboard", "Add New Property", "My Properties", "My favorites", "Save Search", "Reviews", "My Package", "My Profile", "Signup and login", "Password Recovery"] },
+    {"id":  3, "title": "Pages", "items":  ["News","About us","Service","Contact us","Agent", "Agency","FAQS","Page 404","Checkout","Payment Completed","Compare", "Packages"]},
+    {"id": 4, "title": "Dokumentáció", "items": ["Documentation", "UI Kit", "Changelog", "Support"]},
+    {"id": 5, "title": "ENG", "items": null},
+    {"id": 6, "title": "Bejelentkezés", "items":null}
+  ],
+  "header-bottom": [
+    {
+      "id":0,
+      "under_line_text": "Home",
+      "primary_text": "Listing",
+      "filter_text":  "Listing With Left Filter"
+    }
+
+  ],
+  "find-your-home":[
+    {
+      "id": 0,
+      "title": "Find your Home",
+      "area_size": "Area size",
+      "price_range":"Price Range",
+      "sqft_to": " sqft to ",
+      "sqft": " sqft",
+      "slider_space": " to ",
+      "fist_min_price": 0,
+      "fist_max_price":8000000,
+      "second_min_price": 50,
+      "second_max_price": 15000
+    }
+  ],
+  "other-features": [
+    {
+      "id": 0, "title": "Other Features","items": ["Air Conditioning", "Laundry", "Refrigerator", "Washer", "Barbeque", "Lawn", "Sauna", "Wifi", "Dryer", "Microwave", "Swimming Pool", "Window Coverings", "Gym", "Outdoor Shower", "Tv Cable"]
+    }
+  ],
+  "find-input": [
+    {
+      "id": 0,
+      "nameId": "demo-simple-select-city-id",
+      "label": "Location", "name": "city", "items": ["Austin", "Boston", "Chicago", "Denver", "Los Angeles", "New York", "San Francisco"], "inline": false
+    },
+    {
+      "id": 1, "nameID":"demo-simple-types-id", "label": "All Types", "name": "type", "items":["Apartment", "Cando", "Lot", "Multi Family Home", "Office", "Shop"],"inline": false
+    },
+    {
+      "id": 2,"nameID":"demo-simple-status-id", "label": "All Status", "name": "status", "items": ["For Rent", "For Sale"],"inline": false
+    },
+    {
+      "id": 3,"nameID":"demo-simple-beds-id", "label": "Beds", "name": "beds", "items": [3,4], "inline": true
+    },
+    {
+      "id": 4,"nameID":"demo-simple-baths-id", "label": "Baths", "name": "baths", "items": [3,4], "inline": true
+    }
+  ],
+  "properties": [
+    {
+      "id": 0, "bellow_text": "We found ", "after_text": " properties available for you"
+    }
+  ],
+  "sort-by": [
+    {
+      "id": 0, "text": "Sort By"
+    }
+  ],
+  "footer": [
+    {
+      "id": 0,
+      "title": "https://i.ibb.co/kJNyQMx/logo-white-primary.png",
+      "items": ["58 Howard Street #2 San Francisco", "contact@homeid.com","(+68)1221 09876","www.homeid.com"],
+      "footer_bellow": ["Terms of Use", "Privacy Policy"],
+      "input": false,
+      "icons": false,
+      "copyright": ""
+    },
+    {
+      "id": 1,
+      "title":  "Popular Searches",
+      "items": ["Apartment for Rent", "Apartment Low to hide", "Offices for buy", "Offices for Rent"],
+      "input": false,
+      "icons": false,
+      "footer-bellow": [],
+      "copyright": ""
+    },
+    {
+      "id": 2,
+      "title": "Quick links",
+      "items": ["Terms of Use", "Privacy Policy", "Contact Support", "Careers"],
+      "input": false,
+      "icons": false,
+      "footer-bellow": [],
+      "copyright": ""
+    },
+    {
+      "id": 3,
+      "title": "Sign up for Our Newsletter",
+      "items": ["Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis"],
+      "input": true,
+      "icons": true,
+      "footer-bellow": [],
+      "copyright": "2020 homeID. All Rights Reserved"
+    }
+  ],
+  "slider_content": [
+    {"id": 0, "featured_text": "Featured Properties", "month_text":  "/month",
+      "orange_text": "FEATURED", "purple_text": "FOR RENT"
+    }
+  ],
+  "slider":
+  [
+
+    {"id":  0, "title":  "Villa on Hollywood Boulevard", "image": "https://i.ibb.co/7rzgc2N/properties-grid-03.jpg" ,
+      "display": true, "featured_text": "Featured Properties",
+      "price": 1800,
+      "location": "1421 San Predro St, Los Angeles"
+    },
+    {"id":  1, "title":  "Villa on  Hollywood  Royal Poinciana", "image": "https://i.ibb.co/7rzgc2N/properties-grid-03.jpg",
+      "display": true, "featured_text": "Featured Properties",
+      "price": 2200,
+       "location": "1421 San Predro St, Miami"
+    },
+    {"id":  2, "title":  "Villa on Hollywood South Beach", "image": "https://i.ibb.co/7rzgc2N/properties-grid-03.jpg",
+      "display": true,"featured_text": "Featured Properties",
+      "price": 2600,
+       "location": "1421 San Predro St, Washington"
+    }
+  ],
+  "cards": [
+    {
+      "id": 0,
+      "title": "Home in Metric Way",
+      "price": 1250000,
+      "subtitle": "1421 San Pedro St, Los Angeles",
+      "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem",
+      "beds": 3,
+      "baths": 3,
+      "image": "https://i.ibb.co/9hcRZ2n/Home-in-Metric-Way.jpg",
+      "location": "Los Angeles",
+      "type": "Apartment",
+      "year": 2020,
+      "forSale": "ForSale",
+      "garage": 2
+    },
+    {
+      "id": 1,
+      "title": "Garden Gingerbread House",
+      "price": 1250000,
+      "subtitle": "1421 San Pedro St, Los Angeles",
+      "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem",
+      "beds": 4,
+      "baths": 4,
+      "image": "https://i.ibb.co/PcK08Xr/Affordable-Urban-House.jpg",
+      "location": "Los Angeles",
+      "type": "Office", "year": 2019,
+      "forSale": "ForRent",
+      "garage": 1
+    },
+    {
+      "id": 2,
+      "title": "Affordable Urban House",
+      "price": 2500,
+      "subtitle": "1421 San Pedro St, Los Angeles",
+      "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem",
+      "beds": 4,
+      "baths": 4,
+      "image": "https://i.ibb.co/PcK08Xr/Affordable-Urban-House.jpg",
+      "location": "Los Angeles",
+      "type": "Shop", "year": 2021,
+      "forSale": "ForSale",
+      "garage": 3
+    },
+    {
+      "id": 3,
+      "title": "Villa on Hollywood Boulevard",
+      "price": 1250000,
+      "subtitle": "1421 San Pedro St, Los Angeles",
+      "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem",
+      "beds": 3,
+      "baths": 4,
+      "image": "https://i.ibb.co/3s8Yykx/Villa-on-Hollywood-Boule-Vard.jpg",
+      "location": "Los Angeles",
+      "type": "Multi Family Home", "year": 2018,
+      "forSale": "ForRent",
+      "garage": 2
+    },
+    {
+      "id": 4,
+      "title": "Explore Old Barcelona",
+      "price": 2500,
+      "subtitle": "1421 San Pedro St, Los Angeles",
+      "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem",
+      "beds": 3,
+      "baths": 3,
+      "image":"https://i.ibb.co/jLx55bH/Exolore-Old-Barcelolna.jpg",
+      "location": "Los Angeles",
+      "type": "Lot", "year": 2020,
+      "forSale": "ForSale",
+      "garage": 4
+    },
+    {
+      "id": 5,
+      "title": "Test 5",
+      "price": 2500,
+      "subtitle": "1421 San Pedro St, Los Angeles",
+      "description": "Lorem ipsum dolor sit amet, sectetur cing elit uspe ndisse suscorem ipsum dolor sitorem sit amet, sectetur cing elit uspe ndisse suscorem",
+      "beds": 3,
+      "baths": 3,
+      "image":"https://i.ibb.co/jLx55bH/Exolore-Old-Barcelolna.jpg",
+      "location": "Los Angeles",
+      "type": "Lot", "year": 2020,
+      "forSale": "ForSale",
+      "garage": 4
+    }
+
+  ]
+
+
+}

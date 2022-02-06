@@ -1,17 +1,47 @@
-import React from 'react';
+import React, {Suspense}from 'react';
 import ReactDOM from 'react-dom';
-
+import i18next from 'i18next'
+import { initReactI18next } from 'react-i18next'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {CardHomeContext, CardHomeProvider} from "./Components/Contexts/ItemListContext";
+import {CardHomeProvider} from "./Components/Contexts/ItemListContext";
+import LanguageDetector from 'i18next-browser-languagedetector';
+import HttpApi from 'i18next-http-backend'
+
+i18next
+  .use(HttpApi)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    supportedLngs: ['en', 'hu'],
+    fallbackLng: 'en',
+    debug: false,
+    // Options for language detector
+    detection: {
+      order: ['path', 'cookie', 'htmlTag'],
+      caches: ['cookie'],
+    },
+    // react: { useSuspense: false },
+    backend: {
+      loadPath: 'site/{{lng}}.json',
+    },
+  })
+
+const loadingMarkup = (
+    <div className="loading-text">
+        <h2>Loading...</h2>
+    </div>
+)
 
 ReactDOM.render(
-  <React.StrictMode>
+    <Suspense fallback={loadingMarkup}>
+         <React.StrictMode>
      <CardHomeProvider>
          <App />
      </CardHomeProvider>
 
-  </React.StrictMode>,
+  </React.StrictMode>
+    </Suspense>,
   document.getElementById('root')
 );
 

@@ -27,6 +27,11 @@ body{
   flex-direction: column;
   justify-content: space-between;
   background-color: $home-page-color;
+   .loading-text{
+      color: red;
+      position: absolute;
+      right: 4px;
+    }
   .App{
     min-height: 100vh;
 
