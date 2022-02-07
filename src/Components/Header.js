@@ -29,7 +29,7 @@ function MenuHeaderItem({item_data, onClick}){
 
                 {
 
-                    item_data.items.map(i => <Link to={`/categories/${t(item_data.title)}/${i}`} key={i} className="menu-item popup-item">{i}</Link>)
+                   item_data.items.map((i, index) => <Link to={`/categories/${t(`categories.${index}.title`)}/${i}`} key={i} className="menu-item popup-item">{i}</Link>)
                 }
             </div>
         }
