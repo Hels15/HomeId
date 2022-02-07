@@ -23,7 +23,7 @@ i18next
     },
     // react: { useSuspense: false },
     backend: {
-      loadPath: 'site/{{lng}}.json',
+     loadPath: 'site/{{lng}}.json',
     },
   })
 

@@ -2,7 +2,7 @@ import React, {useEffect, useState}from 'react';
 import {Link} from "react-router-dom";
 import axios from "axios"
 import logo from "../Images/logo_black_primary.png"
-import FormControl from '@mui/material/FormControl';
+
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -13,7 +13,7 @@ import {useTranslation} from "react-i18next"
 import i18next from 'i18next'
 
 function MenuHeaderItem({item_data, onClick}){
-
+     const { t } = useTranslation()
     const [menu_list, set_menu_list] = useState([])
 
 
@@ -29,7 +29,7 @@ function MenuHeaderItem({item_data, onClick}){
 
                 {
 
-                    item_data.items.map(i => <Link to={`/categories/${item_data.title}/${i}`} key={i} className="menu-item popup-item">{i}</Link>)
+                    item_data.items.map(i => <Link to={`/categories/${t(item_data.title)}/${i}`} key={i} className="menu-item popup-item">{i}</Link>)
                 }
             </div>
         }
@@ -63,7 +63,7 @@ function HeaderMenu(){
 }
 
 function Header(item_data) {
-    const { t } = useTranslation()
+
     const [input_label_text, set_input_label_text] = useState("lang")
     const [input_label_icon, set_input_label_icon] = useState(true)
     const [input_label_subtitle, set_input_label_subtitle] = useState(false)
