@@ -59,6 +59,7 @@ function Footer(props) {
                 </div>
                 <div className="footer-bellow footer-text">
                     <div className="footer-bellow-content footer-copyright">
+
                         &copy; 2020 homeID. All Rights Reserved
                     </div>
 

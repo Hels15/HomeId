@@ -86,6 +86,7 @@ export const CardHomeProvider = (props) => {
         }).then(res => set_footer(res.data))
     }
     useEffect( () =>{
+
         fetch_card_list()
         fetch_grid_list()
         fetch_header_bottom()

@@ -28,7 +28,6 @@ function MenuHeaderItem({item_data, onClick}){
             item_data.items && <div  className="popup-menu">
 
                 {
-
                    item_data.items.map((i, index) => <Link to={`/categories/${t(`categories.${index}.title`)}/${i}`} key={i} className="menu-item popup-item">{i}</Link>)
                 }
             </div>
@@ -83,7 +82,7 @@ function Header(item_data) {
         }
 
     }
-    console.log(lang)
+
     return (
        <div className="header-container">
            <div className="content-base">

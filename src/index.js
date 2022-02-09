@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import {CardHomeProvider} from "./Components/Contexts/ItemListContext";
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend'
+import { I18nextProvider } from 'react-i18next';
+
 
 i18next
   .use(HttpApi)
@@ -23,7 +25,7 @@ i18next
     },
     // react: { useSuspense: false },
     backend: {
-     loadPath: '/{{lng}}.json',
+     loadPath: `${process.env.PUBLIC_URL}/hu.json`,
     },
   })
 
@@ -33,15 +35,19 @@ const loadingMarkup = (
     </div>
 )
 
-ReactDOM.render(
-    <Suspense fallback={loadingMarkup}>
-         <React.StrictMode>
-     <CardHomeProvider>
-         <App />
-     </CardHomeProvider>
 
+ReactDOM.render(
+         <CardHomeProvider>
+         <Suspense fallback={loadingMarkup}>
+         <React.StrictMode>
+
+         <App />
   </React.StrictMode>
-    </Suspense>,
+
+    </Suspense>
+     </CardHomeProvider>,
+
+
   document.getElementById('root')
 );
 
