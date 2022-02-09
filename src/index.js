@@ -25,7 +25,7 @@ i18next
     },
     // react: { useSuspense: false },
     backend: {
-     loadPath: `${process.env.PUBLIC_URL}/hu.json`,
+     loadPath: `${process.env.PUBLIC_URL}/{{lng}}.json`,
     },
   })
 

@@ -68,7 +68,7 @@ function Header(item_data) {
     const [input_label_subtitle, set_input_label_subtitle] = useState(false)
     const [input_language, set_input_language] = useState("")
     const [languages_display, set_languages_display] = useState(true)
-    const [lang, set_lang] = useState("")
+    const [lang, set_lang] = useState("en")
 
 
 
@@ -95,13 +95,16 @@ function Header(item_data) {
                                 <Button  sx={{width: "100px", margin:"10px",height: "50px", fontSize: "10px"}} variant="contained" {...bindTrigger(popupState)}>
                                 <div className="popup-text">Languages</div>
                                 </Button>
+                                <div className="language-text">Selected Language <span style={{color: "#0EC6D5"}}>{lang} </span></div>
                                 <Menu {...bindMenu(popupState)}>
-                                <MenuItem onClick={() => {popupState.close(); i18next.changeLanguage("hu")}}>Hungarian</MenuItem>
-                                <MenuItem  onClick={() => {popupState.close(); i18next.changeLanguage("en")}}>English</MenuItem>
+                                <MenuItem onClick={() => {popupState.close(); i18next.changeLanguage("hu"); handleOnChange("hu")}}>Hungarian</MenuItem>
+                                <MenuItem  onClick={() => {popupState.close(); i18next.changeLanguage("en"); handleOnChange("en")}}>English</MenuItem>
 
                                 </Menu>
                             </React.Fragment>)}
-    </PopupState>
+
+            </PopupState>
+
 
                 </div>
            </div>
